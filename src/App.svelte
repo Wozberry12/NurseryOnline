@@ -1,28 +1,28 @@
 <script>
-	export let name;
+	import NavigationBar from './components/NavigationBar.svelte'
+
 </script>
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-	<p>Here is a change to test a change in the local </p>
-</main>
+	<h1>Will!</h1>
+	<NavigationBar />
 
+</main>
 
 <style>
 	main {
-		text-align: center;
 		padding: 1em;
 		max-width: 240px;
 		margin: 0 auto;
+		text-align: center;
 	}
 
 	h1 {
 		color: #ff3e00;
 		text-transform: uppercase;
-		font-size: 4em;
+		font-size: 3em;
 		font-weight: 100;
 	}
-
+	
 	@media (min-width: 640px) {
 		main {
 			max-width: none;
