@@ -1,9 +1,11 @@
 <script>
 	import NavigationBar from './components/NavigationBar.svelte'
+	import Login from './components/Login.svelte'
 </script>
+
 <main>
-	<NavigationBar />
-	
+	<div><NavigationBar /></div>
+	<div><Login/></div>
 </main>
 
 <style>
@@ -13,7 +15,7 @@
 		margin: 0 auto;
 		text-align: center;
 	}
-
+	
 	
 	
 	@media (min-width: 640px) {
