@@ -27,6 +27,7 @@ namespace Core2WebAPI.Controllers{
                 fruit = new Fruit(name, price, quantity, img);
                 forSaleFruit.Add(fruit);
             }
+            return forSaleFruit;
         }
     }
 } 
