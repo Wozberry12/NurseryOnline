@@ -11,10 +11,13 @@ using System.Web;
 using Newtonsoft.Json.Serialization;
 namespace Core2WebAPI{
     public class Fruit{
-        string name;
-        double price;
-        int quantity;
-        string img;
+        public string name {get; set;}
+        public double price {get; set;}
+        public int quantity {get; set;}
+        public string img {get; set;}
+        public Fruit(){
+            
+        }
         public Fruit(name, price, quantity, img){
             this.name = name;
             this.price = price;
