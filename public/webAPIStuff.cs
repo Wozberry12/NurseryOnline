@@ -20,5 +20,6 @@ public Fruit get(int id){
             forSaleFruit.Add(fruit);
         }
     }
+    return forSaleFruit;
 
 }
