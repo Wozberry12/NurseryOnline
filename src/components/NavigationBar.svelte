@@ -2,7 +2,7 @@
     
 	export const linkList = [
 		{	label: "Login",
-			href:"./loginPage.html"
+			href:"#"
 		},
 		{	label: "Home",
 			href:"./index.html"
