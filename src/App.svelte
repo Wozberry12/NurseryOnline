@@ -5,7 +5,7 @@
 
 <main>
 	<div id="navDiv"><NavigationBar /></div>
-	<div class="titleDiv"><h1>Welcome to the Online Nursey!</h1></div>
+	<div class="titleDiv"><h1>Welcome to the Online</h1></div>
 	
 	
 </main>
