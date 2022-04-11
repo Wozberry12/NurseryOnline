@@ -71,7 +71,7 @@ ul{
 }
 
 li{
-    float:left;
+    float:right;
 }
 
 li a{
@@ -84,4 +84,13 @@ li a{
 
 li a:hover{
     background-color: #111;
+}
+
+body{
+    background-color: lightgreen;
+}
+
+#titleBar{
+    width: 100%;
+    text-align: center;
 }
