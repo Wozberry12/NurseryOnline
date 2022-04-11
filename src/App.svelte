@@ -1,9 +1,9 @@
 <script>
 	import NavigationBar from '/NavigationBar.svelte'
-
 </script>
 <main>
 	<h1>Will!</h1>
+	<h1>Test</h1>
 	<NavigationBar />
 
 </main>
