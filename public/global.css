@@ -72,6 +72,7 @@ ul{
 
 li{
     float:right;
+	color:white;
 }
 
 li a{
@@ -80,6 +81,7 @@ li a{
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+	color:white;
 }
 
 li a:hover{
@@ -93,4 +95,8 @@ body{
 #titleBar{
     width: 100%;
     text-align: center;
+}
+#forUserInput{
+	width: 100%;
+	text-align: center;
 }
