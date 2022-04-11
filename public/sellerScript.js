@@ -12,7 +12,7 @@ var databaseFruits = [];
 function fillFruitForSale(){
     var forSaleDiv = document.getElementById("forSaleContents");
     forSaleDiv.innerHTML("");
-    for(var i = 0; i<databaseFruits.length; i++){
+    for(var i = 0; i < databaseFruits.length; i++){
         //the way I did this for a previous lab was horrible so if you guys have a better way lets do that :)
     }
 }
