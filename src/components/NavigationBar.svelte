@@ -5,8 +5,8 @@
 		{	label: "Logo",
 			href:"#"
 		},
-        {	label: "Sell Fruit",
-			href:"#"
+        {	label: "Login",
+			href:"public/loginPage.html"
 		},
         {
 			label: "Buy Fruit",
