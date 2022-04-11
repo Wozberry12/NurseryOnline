@@ -2,9 +2,11 @@
 	import NavigationBar from './components/NavigationBar.svelte'
 </script>
 <main>
+	<NavigationBar />
 	<h1>Will!</h1>
 	<h1>Test</h1>
-	<NavigationBar />
+	
+	
 
 </main>
 
