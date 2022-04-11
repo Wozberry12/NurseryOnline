@@ -2,8 +2,8 @@
     
 	export const linkList = [
 		
-		{	label: "Logo",
-			href:"#"
+		{	label: "Home",
+			href:"./index.html"
 		},
         {	label: "Login",
 			href:"./loginPage.html"
