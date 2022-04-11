@@ -24,8 +24,8 @@ function fillFruitForSale(){
     }
 }
 
-function login(){
+function loginConfirmation_Click(){
     var username = document.forms["loginForm"]["username"].value;
     var password = document.forms["loginForm"]["password"].value;
-    
+
 }
