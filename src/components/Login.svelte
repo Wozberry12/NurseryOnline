@@ -10,7 +10,5 @@
         <input type="text" id="password" name="password"><br>
         <input type="submit" id="submit" value="Submit" onclick="loginConfirmation_Click();">
     </form>
-    
-
 </div>
 
