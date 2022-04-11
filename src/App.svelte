@@ -1,5 +1,5 @@
 <script>
-	import NavigationBar from 'src/components/NavigationBar.svelte'
+	import NavigationBar from './components/NavigationBar.svelte'
 </script>
 <main>
 	<h1>Will!</h1>
