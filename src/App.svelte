@@ -4,8 +4,8 @@
 </script>
 
 <main>
-	<div><NavigationBar /></div>
-	<div><Login/></div>
+	<div id="navDiv"><NavigationBar /></div>
+	<div id="loginDiv"><Login/></div>
 	
 </main>
 
@@ -16,8 +16,12 @@
 		margin: 0 auto;
 		text-align: center;
 	}
-	
-	
+	#loginDiv{
+		margin:auto;
+	}
+	#navDiv{
+		margin:auto;
+	}
 	
 	@media (min-width: 640px) {
 		main {

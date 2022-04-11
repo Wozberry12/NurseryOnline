@@ -37,28 +37,30 @@
         font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         height: 50px;       
     }
-    .navContainer{
-        padding-left: 20px;
-        padding-right: 20px;
-        margin:auto;
-        box-sizing: border-box;
-        align-items: center;
-        height:100%;
-        text-decoration: none;
-    }
-    .navList{
-        text-decoration: none;
-    }
-    .navList li{
-        width: 100%;
-        justify-content: space-between;
-        margin: 0;
-        padding: 0 40px;
-        text-decoration: none;
-        list-style: none;
+    
+    ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    overflow: hidden;
+    background-color: #333;
     }
 
+    li{
+        float:right;
+	    color:white;
+    }
 
+    li a{
+        display: block;
+        color:white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+	    color:white;
+    }
 
-
+    li a:hover{
+        background-color: #111;
+    }
 </style>
