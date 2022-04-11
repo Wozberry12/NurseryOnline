@@ -4,9 +4,6 @@
 <main>
 	<NavigationBar />
 	
-	
-	
-
 </main>
 
 <style>
