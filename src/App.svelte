@@ -1,24 +1,25 @@
 <script>
 	import NavigationBar from './components/NavigationBar.svelte'
-	import Login from './components/Login.svelte'
+	
 </script>
 
 <main>
 	<div id="navDiv"><NavigationBar /></div>
-	<div id="loginDiv"><Login/></div>
+	<div class="titleDiv"><h1>Welcome to the Online Nursey!</h1></div>
+	
 	
 </main>
 
 <style>
+	
 	main {
 		padding: 1em;
 		max-width: 240px;
 		margin: 0 auto;
 		text-align: center;
+		padding:0;
 	}
-	#loginDiv{
-		margin:auto;
-	}
+	
 	#navDiv{
 		margin:auto;
 	}

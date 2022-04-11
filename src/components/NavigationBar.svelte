@@ -1,12 +1,11 @@
 <script>
     
 	export const linkList = [
-		
+		{	label: "Login",
+			href:"./loginPage.html"
+		},
 		{	label: "Home",
 			href:"./index.html"
-		},
-        {	label: "Login",
-			href:"./loginPage.html"
 		},
         {
 			label: "Buy Fruit",
@@ -22,8 +21,8 @@
 </script>
 <!--Markup is here-->
 <nav>
-    <div class ="navContainer">
-        <ul class ="navList">
+    <div id="navContainer">
+        <ul id ="navList">
             {#each linkList as link}
                 <li>
                     <a href={link.href}>{link.label}</a>
