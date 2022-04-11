@@ -1,25 +1,34 @@
-[HttpGet("{id}")]
-public Fruit get(int id){
-    string strConnection ="";
-    string strSQL ="";
-    OleDbConnection myConnection = new OleDbConnection(strConnection);
-    OleDbCommand myCommand = new OleDbCommand(strSQL, myConnection);
-    OleDbDataReader myDataReader;
-    List<Fruit> forSaleFruit = new List<Fruit>();
-    
-    try{
-        myConnection.Open();
-        myDataReader = myCommand.ExecuteReader();
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using System.Data;              
+using System.Data.SqlClient;    
+using Utilities;
 
-        while(myDataReader.Read()){
-            string name = myDataReader["Name"].ToString();
-            double price = myDataReader["Price"].ToString(); //when database setup will change this to the int parse
-            int quantity = myDataReader["Quantity"].ToString(); //^^
-            string img = myDataReader["img"].ToString(); //img string we can use in html to load an image idk how this will work yet
-            Fruit fruit = new Fruit(name, price, quantity, img);
-            forSaleFruit.Add(fruit);
+namespace Core2WebAPI.Controllers{
+    [Route("api/[controller]")]
+    public class frutiController : Controller
+    {
+    [HttpGet]
+    public List<Fruit> Get(){
+        
+        DBConnect objDB = new DBConnect();
+        DataSet ds = objDB.getDataSet("SELECT * FROM Fruits");
+        List<Fruit> forSaleFruit = new List<Fruit>();
+    
+        
         }
     }
-    return forSaleFruit;
+} 
 
-}
+
+
+    
+        
+          
+
+
+
