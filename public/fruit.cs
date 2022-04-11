@@ -11,9 +11,11 @@ namespace Core2WebAPI{
         public double price {get; set;}
         public int quantity {get; set;}
         public string img {get; set;}
+        
         public Fruit(){
 
         }
+        
         public Fruit(name, price, quantity, img){
             this.name = name;
             this.price = price;
