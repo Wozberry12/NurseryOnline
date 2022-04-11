@@ -6,7 +6,7 @@
 			href:"#"
 		},
         {	label: "Login",
-			href:"public/loginPage.html"
+			href:"./loginPage.html"
 		},
         {
 			label: "Buy Fruit",
@@ -26,7 +26,7 @@
         <ul class ="navList">
             {#each linkList as link}
                 <li>
-                    {link.label}
+                    <a href={link.href}>{link.label}</a>
                 </li>
             {/each}
         </ul>

@@ -3,8 +3,7 @@
 </script>
 <main>
 	<NavigationBar />
-	<h1>Will!</h1>
-	<h1>Test</h1>
+	
 	
 	
 
@@ -18,12 +17,7 @@
 		text-align: center;
 	}
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 3em;
-		font-weight: 100;
-	}
+	
 	
 	@media (min-width: 640px) {
 		main {
