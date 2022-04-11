@@ -1,6 +1,6 @@
-import Login from './LoginPage.svelte';
+import App from './LoginPage.svelte';
 
-const app = new Login({
+const app = new App({
 	target: document.body,
 	props: {
 		name: 'Login'
