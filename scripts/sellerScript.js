@@ -23,3 +23,9 @@ function fillFruitForSale(){
         //the way I did this for a previous lab was horrible so if you guys have a better way lets do that :)
     }
 }
+
+function login(){
+    var username = document.forms["loginForm"]["username"].value;
+    var password = document.forms["loginForm"]["password"].value;
+    
+}
