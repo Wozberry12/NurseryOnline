@@ -24,9 +24,9 @@
 
 <div id="fruitList">
     {#each fruitList as fruit}
-        <div class="fruitBox">
-			<img  class="fruitImage" src={fruit.img} alt={fruit.name}>
-			<div class="fruitDescription">
+        <div class="container">
+			<img  class="itemImage" src={fruit.img} alt={fruit.name}>
+			<div class="itemDescription">
 				Name:{fruit.name}
 				<br>
 				Price: {fruit.price}
