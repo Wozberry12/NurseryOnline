@@ -22,7 +22,7 @@
 <div id="fruitList">
     {#each fruitList as fruit}
         <div class="fruitBox">
-			<div class="fruitImage"><img src={fruit.img} alt={fruit.name}></div>
+		<img  class="fruitImage" src={fruit.img} alt={fruit.name}></div>
 		<div class="fruitDescription">
 			Name:{fruit.name}
 			<br>
@@ -30,7 +30,6 @@
 			<br>
 			Quantity {fruit.quanity}
 			<br>
-		</div>
 		</div>
     {/each}
 </div>
