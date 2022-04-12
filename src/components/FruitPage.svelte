@@ -22,7 +22,7 @@
 	}
 </script>
 
-<div id="fruitList">
+<div id="itemList">
     {#each fruitList as fruit}
         <div class="container">
 			<img  class="itemImage" src={fruit.img} alt={fruit.name}>
