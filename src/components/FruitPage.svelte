@@ -16,7 +16,9 @@
 	var fruitList = [goldenDelicous, grannySmith, cantelope, pineApple];
     localStorage.setItem("fruitList", JSON.stringify(fruitList));
 
-    
+    const handleWish = (fruitName) => {
+		console.log(fruitName)
+	}
 </script>
 
 <div id="fruitList">
@@ -31,6 +33,7 @@
 				Quantity {fruit.quanity}
 				<br>
 			</div>
+			<button class="addWishlist" on:click={() => handleWish(fruit.name)}></button>
 		</div>
     {/each}
 </div>

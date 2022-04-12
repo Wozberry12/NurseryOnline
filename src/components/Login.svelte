@@ -1,3 +1,4 @@
+
 <script>
     class profile{
         constructor(username, password){
@@ -10,6 +11,7 @@
     var localAccounts = [account1, account2];
     localStorage.setItem("Accounts", JSON.stringify(localAccounts));
 </script>
+
 <div id="titleBar">
     <h1>Login to your Nursey Online Account Below</h1>
 </div>
