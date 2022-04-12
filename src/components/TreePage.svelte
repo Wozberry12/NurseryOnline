@@ -22,11 +22,11 @@
 	}
 </script>
 
-<div id="fruitList">
+<div id="treeList">
     {#each treeList as tree}
-        <div class="fruitBox">
-			<img  class="fruitImage" src={tree.img} alt={tree.name}>
-			<div class="fruitDescription">
+        <div class="container">
+			<img  class="itemImage" src={tree.img} alt={tree.name}>
+			<div class="itemDescription">
 				Name:{tree.name}
 				<br>
 				Price: {tree.price}
