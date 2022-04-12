@@ -1,5 +1,5 @@
 <script>
-    class fruit{
+    class Fruit{
 		constructor(id, name, fruitType, price, quanity, img){
 			this.id = id;
 			this.name =name;
@@ -10,10 +10,10 @@
 		}
 	}
 	
-	var goldenDelicous = new fruit(1001, "Golden Delicous Apple", "Apple", 4.50, 25, "https://www.applesfromny.com/wp-content/uploads/2020/06/Golden-DeliciousNEW.png");
-	var grannySmith = new fruit(1002, "Granny Smith Apple", "Apple", 3.75, 30, "#");
-	var cantelope = new fruit(1003, "Cantelope", "Cantelope", 6.99, 15, "#");
-	var pineApple = new fruit(1004, "Pineapple", "Pineapple", 5.45, 29, "#");
+	var goldenDelicous = new Fruit(1001, "Golden Delicous Apple", "Apple", 4.50, 25, "https://www.applesfromny.com/wp-content/uploads/2020/06/Golden-DeliciousNEW.png");
+	var grannySmith = new Fruit(1002, "Granny Smith Apple", "Apple", 3.75, 30, "#");
+	var cantelope = new Fruit(1003, "Cantelope", "Cantelope", 6.99, 15, "#");
+	var pineApple = new Fruit(1004, "Pineapple", "Pineapple", 5.45, 29, "#");
 	var fruitList = [goldenDelicous, grannySmith, cantelope, pineApple];
     localStorage.setItem("fruitList", JSON.stringify(fruitList));
 
