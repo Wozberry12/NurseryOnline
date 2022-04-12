@@ -26,10 +26,19 @@
 
 <main>
 	<div id="navDiv"><NavigationBar /></div>
+<<<<<<< HEAD
 
 	<footer>
 		<p>this is a footer</p>
 	</footer>
+=======
+		
+	
+	<!-- <div class="plantlist">
+		<FeedbackList {feedback}/>
+	</div> -->
+	
+>>>>>>> 92b973b2e872561c59b47a95fd463816f577423b
 </main>
 
 
