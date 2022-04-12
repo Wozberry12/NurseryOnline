@@ -10,11 +10,11 @@
 		}
 	}
 	
-	var goldenDelicous = new Tree(2001, "Golden Delicous Apple", "Apple", 4.50, 25, "https://www.applesfromny.com/wp-content/uploads/2020/06/Golden-DeliciousNEW.png");
-	var grannySmith = new Tree(2002, "Granny Smith Apple", "Apple", 3.75, 30, "#");
-	var cantelope = new Tree(2003, "Cantelope", "Cantelope", 6.99, 15, "#");
-	var pineApple = new Tree(2004, "Pineapple", "Pineapple", 5.45, 29, "#");
-	var treeList = [goldenDelicous, grannySmith, cantelope, pineApple];
+	var bonsai = new Tree(2001, "Bonsai Tree", "Bonsai", 999.99, 2, "https://m.media-amazon.com/images/I/716E7FNKtFL._AC_SX569_.jpg");
+	var dragon = new Tree(2002, "Dragon Tree", "Caesalpinia", 3.75, 30, "https://i5.walmartimages.com/asr/0149db71-df23-4dc8-9995-205fb5acfbd2.284e3ef8e9998c0dfc4330141cf5f0ee.jpeg");
+	var palm = new Tree(2003, "Parlor Palm", "Chamaedora elegans", 6.99, 15, "https://images.thdstatic.com/productImages/9fcb04c0-aff8-406c-afbe-ce886879ce58/svn/indoor-plants-4-palm-parlor-64_1000.jpg");
+	var candelabra = new Tree(2004, "African Candelabra", "Pineapple", 5.45, 29, "https://i.etsystatic.com/20034067/r/il/ff969a/1852472466/il_fullxfull.1852472466_m4eb.jpg");
+	var treeList = [bonsai, dragon, palm, candelabra];
     localStorage.setItem("treeList", JSON.stringify(treeList));
 
     const handleWish = (treeID) => {

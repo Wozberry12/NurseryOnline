@@ -21,12 +21,12 @@
 	
 	<div id="navDiv"><NavigationBar /></div>
 
-	<footer>
-		<p>this is a footer</p>
-	</footer>
-	
-</main>
 
+</main>
+<footer>
+	<p>Authors: <br>
+		Benjamin Kamish, Marco Kosasih, William</p>
+  </footer>
 
 <style>
 	
