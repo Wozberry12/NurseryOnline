@@ -1,25 +1,9 @@
 <script>
     import Login from "./Login.svelte";
     import Wishlist from "./Wishlist.svelte";
+    import FeedbackList from "./FeedbackList.svelte";
+    import About from "./About.svelte";
     export let menu = 1;
-
-	// export const linkList = [
-	// 	{	label: "Login",
-	// 		href:"#"
-	// 	},
-	// 	{	label: "Home",
-	// 		href:"./index.html"
-	// 	},
-    //     {
-	// 		label: "Buy Fruit",
-	// 		href:"#"
-	// 	},
-    //     {
-	// 		label: "Trees",
-	// 		href:"#"
-	// 	}
-		
-	// ]
 
 </script>
 <!--Markup is here-->
@@ -28,6 +12,8 @@
         <ul id ="navList">
             <li><a href="/" on:click|preventDefault={() => (menu = 1)}>Login</a></li>
             <li><a href="/" on:click|preventDefault={() => (menu = 2)}>WishList</a></li>
+            <li><a href="/" on:click|preventDefault={() => (menu = 3)}>Feedback List</a></li>
+            <li><a href="/" on:click|preventDefault={() => (menu = 4)}>About</a></li>
 
             <!-- {#each linkList as link}
                 <li> <a href={link.href}>{link.label}</a></li>
@@ -40,6 +26,10 @@
     <Login />
 {:else if menu === 2}
     <Wishlist />
+{:else if menu === 3}
+    <FeedbackList />
+{:else if menu === 4}
+    <About />
 {:else}
     <h1>Page not Found</h1>
 {/if}
