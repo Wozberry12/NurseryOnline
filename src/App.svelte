@@ -38,12 +38,6 @@
 	let cantelope = new Fruit("Cantelope", "Cantelope", 6.99, 15, "imgString");
 	let pineApple = new Fruit("Pineapple", "Pineapple", 5.45, 29, "imgString");
 	var fruitList = new Fruit(goldenDelicous, grannySmith, cantelope, pineApple);
-
-	// const stored = localStorage.content
-
-	
-	// export const content = writable<Fruit>(JSON.parse(localStorage.getItem('fruit')))
-	// content.subscribe((value) => localStorage.fruit = JSON.stringify(value))
 </script>
 
 <main>
