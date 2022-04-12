@@ -3,7 +3,7 @@
 		constructor(id, name, treeType, price, quantity, img){
 			this.id = id;
 			this.name =name;
-			this.fruitType = fruitType;
+			this.treeType = treeType;
 			this.price = price;
 			this.quantity = quantity;
 			this.img = img;
