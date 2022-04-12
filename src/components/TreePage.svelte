@@ -22,7 +22,7 @@
 	}
 </script>
 
-<div id="treeList">
+<div id="itemList">
     {#each treeList as tree}
         <div class="container">
 			<img  class="itemImage" src={tree.img} alt={tree.name}>
