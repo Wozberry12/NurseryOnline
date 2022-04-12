@@ -42,13 +42,16 @@ input, button, select, textarea {
 	border-radius: 2px;
 }
 .fruitImage{
+	margin: 10px;
 	float: left;
 	height: 20%;
 	width: 20%;
 	border: groove;
 }
 .fruitDescription{
-	clear:both;
+	width: 85%;
+	font-size: 25px;
+
 }
 input:disabled {
 	color: #ccc;
