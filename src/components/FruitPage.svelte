@@ -1,6 +1,7 @@
 <script>
     class fruit{
-		constructor(name, fruitType, price, quanity, img){
+		constructor(id, name, fruitType, price, quanity, img){
+			this.id = id;
 			this.name =name;
 			this.fruitType = fruitType;
 			this.price = price;
@@ -9,15 +10,15 @@
 		}
 	}
 	
-	var goldenDelicous = new fruit("Golden Delicous Apple", "Apple", 4.50, 25, "https://www.applesfromny.com/wp-content/uploads/2020/06/Golden-DeliciousNEW.png");
-	var grannySmith = new fruit("Granny Smith Apple", "Apple", 3.75, 30, "#");
-	var cantelope = new fruit("Cantelope", "Cantelope", 6.99, 15, "#");
-	var pineApple = new fruit("Pineapple", "Pineapple", 5.45, 29, "#");
+	var goldenDelicous = new fruit(1001, "Golden Delicous Apple", "Apple", 4.50, 25, "https://www.applesfromny.com/wp-content/uploads/2020/06/Golden-DeliciousNEW.png");
+	var grannySmith = new fruit(1002, "Granny Smith Apple", "Apple", 3.75, 30, "#");
+	var cantelope = new fruit(1003, "Cantelope", "Cantelope", 6.99, 15, "#");
+	var pineApple = new fruit(1004, "Pineapple", "Pineapple", 5.45, 29, "#");
 	var fruitList = [goldenDelicous, grannySmith, cantelope, pineApple];
     localStorage.setItem("fruitList", JSON.stringify(fruitList));
 
-    const handleWish = (fruitName) => {
-		console.log(fruitName)
+    const handleWish = (fruitID) => {
+		console.log(fruitID)
 	}
 </script>
 
@@ -33,7 +34,7 @@
 				Quantity {fruit.quanity}
 				<br>
 			</div>
-			<button class="addWishlist" on:click={() => handleWish(fruit.name)}></button>
+			<button class="addWishlist" on:click={() => handleWish(fruit.id)}>Add to WishList</button>
 		</div>
     {/each}
 </div>
