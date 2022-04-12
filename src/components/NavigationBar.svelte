@@ -1,6 +1,7 @@
 <script>
     import Login from "./Login.svelte";
     import Wishlist from "./Wishlist.svelte";
+    import FeedbackList from "./FeedbackList.svelte";
     export let menu = 1;
 
 	// export const linkList = [
@@ -28,6 +29,7 @@
         <ul id ="navList">
             <li><a href="/" on:click|preventDefault={() => (menu = 1)}>Login</a></li>
             <li><a href="/" on:click|preventDefault={() => (menu = 2)}>WishList</a></li>
+            <li><a href="/" on:click|preventDefault={() => (menu = 3)}>Feedback List</a></li>
 
             <!-- {#each linkList as link}
                 <li> <a href={link.href}>{link.label}</a></li>
@@ -40,6 +42,8 @@
     <Login />
 {:else if menu === 2}
     <Wishlist />
+{:else if menu === 3}
+    <FeedbackList />
 {:else}
     <h1>Page not Found</h1>
 {/if}
