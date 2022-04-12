@@ -22,14 +22,15 @@
 <div id="fruitList">
     {#each fruitList as fruit}
         <div class="fruitBox">
-		<img  class="fruitImage" src={fruit.img} alt={fruit.name}></div>
-		<div class="fruitDescription">
-			Name:{fruit.name}
-			<br>
-			Price: {fruit.price}
-			<br>
-			Quantity {fruit.quanity}
-			<br>
+			<img  class="fruitImage" src={fruit.img} alt={fruit.name}>
+			<div class="fruitDescription">
+				Name:{fruit.name}
+				<br>
+				Price: {fruit.price}
+				<br>
+				Quantity {fruit.quanity}
+				<br>
+			</div>
 		</div>
     {/each}
 </div>
