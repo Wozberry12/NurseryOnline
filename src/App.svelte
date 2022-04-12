@@ -1,28 +1,6 @@
 <script>
 	import NavigationBar from './components/NavigationBar.svelte'
 	import FruitPage from './components/FruitPage.svelte'
-	import {writable} from "svelte/store";
-	
-	let feedback = [
-		{
-			id: 1,
-			rating: 10,
-			name: 'rose',
-			description: 'this is a rose',
-		},
-		{
-			id: 2,
-			rating: 10,
-			name: 'daisy',
-			description: 'this is a daisy',
-		},
-		{
-			id: 1,
-			rating: 10,
-			name: 'tulip',
-			description: 'this is a tulip',
-		}
-	]
 	class Fruit{
 		constructor(name, fruitType, price, quanity, img){
 			this.name =name;
