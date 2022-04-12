@@ -22,6 +22,15 @@
 			description: 'this is a tulip',
 		}
 	]
+	class fruit{
+		constructor(name, price, quanity, img){
+			this.name =name;
+			this.price = price;
+			this.quanity = quanity;
+			this.img = img;
+		}
+	}
+	var apples = new fruit("Golden Delicous Apple", 4.50, 25, "imgString");
 </script>
 
 <main>
