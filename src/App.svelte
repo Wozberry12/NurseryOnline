@@ -40,7 +40,6 @@
 
 <main>
 	<div id="navDiv"><NavigationBar /></div>
-<<<<<<< HEAD
 
 	<footer>
 		<p>this is a footer</p>
