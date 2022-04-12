@@ -26,7 +26,6 @@
 
 <main>
 	<div id="navDiv"><NavigationBar /></div>
-	<!-- <div class="titleDiv"><h1>If you see this its working</h1></div> -->
 
 	<footer>
 		<p>this is a footer</p>
