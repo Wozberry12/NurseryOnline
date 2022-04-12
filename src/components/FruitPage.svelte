@@ -13,7 +13,7 @@
 	var grannySmith = new fruit("Granny Smith Apple", "Apple", 3.75, 30, "imgString");
 	var cantelope = new fruit("Cantelope", "Cantelope", 6.99, 15, "imgString");
 	var pineApple = new fruit("Pineapple", "Pineapple", 5.45, 29, "imgString");
-	var fruitList = new fruit(goldenDelicous, grannySmith, cantelope, pineApple);
+	var fruitList = [goldenDelicous, grannySmith, cantelope, pineApple];
     localStorage.setItem("fruitList", JSON.stringify(fruitList));
 
     

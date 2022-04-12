@@ -30,7 +30,7 @@
 <main>
 	<h1>Test</h1>
 	<div id="navDiv"><NavigationBar /></div>
-	<FruitPage />
+	<!--<FruitPage /> -->
 	
 	<footer>
 		<p>this is a footer</p>
