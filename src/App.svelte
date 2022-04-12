@@ -1,6 +1,5 @@
 <script>
 	import NavigationBar from './components/NavigationBar.svelte'
-	import FruitPage from './components/FruitPage.svelte'
 	class Fruit{
 		constructor(name, fruitType, price, quanity, img){
 			this.name =name;
