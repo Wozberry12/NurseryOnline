@@ -23,14 +23,19 @@
 		}
 	]
 	class fruit{
-		constructor(name, price, quanity, img){
+		constructor(name, fruitType, price, quanity, img){
 			this.name =name;
+			this.fruitType = fruitType;
 			this.price = price;
 			this.quanity = quanity;
 			this.img = img;
 		}
 	}
-	var apples = new fruit("Golden Delicous Apple", 4.50, 25, "imgString");
+	
+	var goldenDelicous = new fruit("Golden Delicous Apple", "Apple", 4.50, 25, "imgString");
+	var grannySmith = new fruit("Granny Smith Apple", "Apple", 3.75, 30, "imgString");
+	var fruitList = new fruit(goldenDelicous, grannySmith);
+	
 </script>
 
 <main>
