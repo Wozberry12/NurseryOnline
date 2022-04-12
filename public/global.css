@@ -41,7 +41,15 @@ input, button, select, textarea {
 	border: 1px solid #ccc;
 	border-radius: 2px;
 }
-
+.fruitImage{
+	float: left;
+	height: 20%;
+	width: 20%;
+	border: groove;
+}
+.fruitDescription{
+	clear:both;
+}
 input:disabled {
 	color: #ccc;
 }
@@ -80,3 +88,5 @@ footer{
 	padding: 0 10px;
 	margin: 100px auto;
 }
+
+this is a test
