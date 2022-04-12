@@ -26,7 +26,7 @@
 
 <main>
 	<div id="navDiv"><NavigationBar /></div>
-	<div class="titleDiv"><h1>If you see this its working</h1></div>
+		
 	
 	<!-- <div class="plantlist">
 		<FeedbackList {feedback}/>
