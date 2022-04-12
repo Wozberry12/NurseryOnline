@@ -17,6 +17,7 @@
                 localStorage.setItem("LoggedInUser", JSON.stringify(accounts[i].username));
             }
         }
+        console.log(JSON.parse(localStorage.getItem("LoggedInUser")));
     }
 </script>
 
