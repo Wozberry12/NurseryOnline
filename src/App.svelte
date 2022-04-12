@@ -51,7 +51,6 @@
 
 	export const content = writable<Fruit>(JSON.parse(localStorage.getItem('fruit')))
 	content.subscribe((value) => localStorage.fruit = JSON.stringify(value))
->>>>>>> Stashed changes
 </script>
 
 <main>
