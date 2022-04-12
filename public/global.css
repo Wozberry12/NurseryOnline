@@ -41,6 +41,9 @@ input, button, select, textarea {
 	border: 1px solid #ccc;
 	border-radius: 2px;
 }
+.fruitBox{
+	clear:both;
+}
 .fruitImage{
 	margin: 10px;
 	float: left;
