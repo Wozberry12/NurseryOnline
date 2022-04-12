@@ -1,14 +1,39 @@
 <script>
 	import NavigationBar from './components/NavigationBar.svelte'
+	import FeedbackList from './components/FeedbackList.svelte'
 	
+	let feedback = [
+		{
+			id: 1,
+			rating: 10,
+			name: 'rose',
+			description: 'this is a rose',
+		},
+		{
+			id: 2,
+			rating: 10,
+			name: 'daisy',
+			description: 'this is a daisy',
+		},
+		{
+			id: 1,
+			rating: 10,
+			name: 'tulip',
+			description: 'this is a tulip',
+		}
+	]
 </script>
 
 <main>
 	<div id="navDiv"><NavigationBar /></div>
 	<div class="titleDiv"><h1>If you see this its working</h1></div>
 	
+	<!-- <div class="plantlist">
+		<FeedbackList {feedback}/>
+	</div> -->
 	
 </main>
+
 
 <style>
 	

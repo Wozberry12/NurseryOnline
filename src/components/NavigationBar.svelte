@@ -1,36 +1,48 @@
 <script>
-    
-	export const linkList = [
-		{	label: "Login",
-			href:"#"
-		},
-		{	label: "Home",
-			href:"./index.html"
-		},
-        {
-			label: "Buy Fruit",
-			href:"#"
-		},
-        {
-			label: "Trees",
-			href:"#"
-		}
+    import Login from "./Login.svelte";
+    import Wishlist from "./Wishlist.svelte";
+    export let menu = 1;
+
+	// export const linkList = [
+	// 	{	label: "Login",
+	// 		href:"#"
+	// 	},
+	// 	{	label: "Home",
+	// 		href:"./index.html"
+	// 	},
+    //     {
+	// 		label: "Buy Fruit",
+	// 		href:"#"
+	// 	},
+    //     {
+	// 		label: "Trees",
+	// 		href:"#"
+	// 	}
 		
-	]
+	// ]
 
 </script>
 <!--Markup is here-->
 <nav>
     <div id="navContainer">
         <ul id ="navList">
-            {#each linkList as link}
-                <li>
-                    <a href={link.href}>{link.label}</a>
-                </li>
-            {/each}
+            <li><a href="/" on:click|preventDefault={() => (menu = 1)}>Login</a></li>
+            <li><a href="/" on:click|preventDefault={() => (menu = 2)}>WishList</a></li>
+
+            <!-- {#each linkList as link}
+                <li> <a href={link.href}>{link.label}</a></li>
+            {/each} -->
         </ul>
     </div>
 </nav>
+
+{#if menu === 1}
+    <Login />
+{:else if menu === 2}
+    <Wishlist />
+{:else}
+    <h1>Page not Found</h1>
+{/if}
 <style>
     nav{
         font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;

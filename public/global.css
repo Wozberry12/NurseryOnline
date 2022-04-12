@@ -6,6 +6,7 @@ html, body {
 }
 
 body {
+	background-color: lightgreen;
 	color: #333;
 	margin:0;
 	padding:0;
@@ -63,17 +64,11 @@ button:focus {
 	border-color: #666;
 }
 
-
-
-body{
-    background-color: lightgreen;
-}
-
-#titleBar{
+/* #titleBar{
     width: 100%;
     text-align: center;
 }
 #forUserInput{
 	width: 100%;
 	text-align: center;
-}
+} */
