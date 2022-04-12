@@ -1,6 +1,6 @@
 <script>
 	import NavigationBar from './components/NavigationBar.svelte'
-	import FeedbackList from './components/FeedbackList.svelte'
+	
 	import FruitPage from './components/FruitPage.svelte'
 	import {writable} from "svelte/store";
 	
