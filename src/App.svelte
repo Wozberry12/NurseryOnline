@@ -1,7 +1,11 @@
 <script>
 	import NavigationBar from './components/NavigationBar.svelte'
 	import FeedbackList from './components/FeedbackList.svelte'
+<<<<<<< Updated upstream
 	import FruitPage from './components/FruitPage.svelte'
+=======
+	import {writable} from "svelte/store";
+>>>>>>> Stashed changes
 	
 	let feedback = [
 		{
@@ -23,8 +27,31 @@
 			description: 'this is a tulip',
 		}
 	]
+<<<<<<< Updated upstream
 	
 	
+=======
+	class Fruit{
+		constructor(name, fruitType, price, quanity, img){
+			this.name =name;
+			this.fruitType = fruitType;
+			this.price = price;
+			this.quanity = quanity;
+			this.img = img;
+		}
+	}
+	
+	let goldenDelicous = new Fruit("Golden Delicous Apple", "Apple", 4.50, 25, "imgString");
+	let grannySmith = new Fruit("Granny Smith Apple", "Apple", 3.75, 30, "imgString");
+	let cantelope = new Fruit("Cantelope", "Cantelope", 6.99, 15, "imgString");
+	let pineApple = new Fruit("Pineapple", "Pineapple", 5.45, 29, "imgString");
+	var fruitList = new Fruit(goldenDelicous, grannySmith, cantelope, pineApple);
+
+	const stored = localStorage.content
+
+	export const content = writable<Fruit>(JSON.parse(localStorage.getItem('fruit')))
+	content.subscribe((value) => localStorage.fruit = JSON.stringify(value))
+>>>>>>> Stashed changes
 </script>
 
 <main>
