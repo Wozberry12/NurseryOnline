@@ -48,7 +48,7 @@
 </script>
 
 <main>
-	<h1>Test</h1>
+	
 	<div id="navDiv"><NavigationBar /></div>
 
 	<footer>
