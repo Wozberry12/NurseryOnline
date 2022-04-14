@@ -24,14 +24,21 @@
         var password = loginForm.username.value;
         for(var i = 0; i < localAccounts.length; i++){
             if(localAccounts[i].username == username && localAccounts[i].passowrd == password){
-                localStorage.setItem("currentlyLogedIn", JSON.stringify(username));
+                localStorage.setItem("LoggedInUser", JSON.stringify(username));
             }
         }
-        console.log(JSON.parse(localStorage.getItem("currentlyLogedIn")));   
+        console.log(JSON.parse(localStorage.getItem("LoggedInUser")));   
     }
     const handleLogin = (usernameLogin, passwordLogin) => {
 		var accountsList = localStorage.getItem("Accounts");
-        sessionStorage.setItem("currentlyLogedIn", usernameLogin);
+        for(var i = 0; i < accountsList.length; i++){
+            if(accountsList[i].username == usernameLogin && accountsList[i].password == passwordLogin){
+                sessionStorage.setItem("currentlyLogedIn", usernameLogin);
+            }
+            else{
+                console.log("Account " + usernameLogin + " is not found");
+            }
+        }
 	}
 </script>
 
