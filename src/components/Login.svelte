@@ -1,5 +1,6 @@
-
 <script>
+    let usernameLogin;
+    let passwordLogin;
     class profile{
         constructor(username, password){
             this.username;
@@ -32,12 +33,12 @@
 <div id="forUserInput">
     <form id="loginForm">
         <label for="username">Username</label>
-        <input type="text" id="username" name="username">
+        <input type="text" id="username" name="username" bind:value={usernameLogin}>
         <label for="password">Password</label>
         <input type="text" id="password" name="password"><br>
         <input type="submit" id="submit" value="Submit" onclick="login();">
     </form>
-    
+
     <div class="loginButton"
         ><button class="addWishlist" on:click={() => handleLogin()}>Login</button>
     </div>
