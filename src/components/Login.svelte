@@ -2,13 +2,18 @@
     let usernameLogin;
     let passwordLogin;
     class profile{
-        constructor(username, password){
-            this.username;
-            this.password;
+        constructor(username, password, wishList){
+            this.username = username;
+            this.password = password;
+            this.wishList = wishList;
+        }
+        getWishList(){
+            return wishList;
         }
     }
-    var account1 = new profile("marco", "marcopassword");
-    var account2 = new profile("ben", "benpassword");
+    var wishList = [];
+    var account1 = new profile("marco", "marcopassword", wishList);
+    var account2 = new profile("ben", "benpassword", wishList);
     var localAccounts = [account1, account2];
     localStorage.setItem("Accounts", JSON.stringify(localAccounts));
     

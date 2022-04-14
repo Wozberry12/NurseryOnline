@@ -18,7 +18,11 @@
     localStorage.setItem("fruitList", JSON.stringify(fruitList));
 
     const handleWish = (fruitID) => {
-		console.log(fruitID)
+		var currentProfile = JSON.parse(sessionStorage.getItem("LoggedInUser"));
+		var localWishList = currentProfile.getWishList();
+		localWishList.push(fruitID);
+		currentProfile.wishList = localWishList;
+		sessionStorage.setItem("LoggedInUser", JSON.stringify(currentProfile));
 	}
 </script>
 
