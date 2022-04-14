@@ -1,4 +1,6 @@
 <script>
+import Profile from "./Login.svelte";
+
     class Fruit{
 		constructor(id, name, fruitType, price, quanity, img){
 			this.id = id;
@@ -10,6 +12,7 @@
 		}
 	}
 	
+
 	var goldenDelicous = new Fruit(1001, "Golden Delicous Apple", "Apple", 4.50, 25, "https://www.applesfromny.com/wp-content/uploads/2020/06/Golden-DeliciousNEW.png");
 	var grannySmith = new Fruit(1002, "Granny Smith Apple", "Apple", 3.75, 30, "#");
 	var cantelope = new Fruit(1003, "Cantelope", "Cantelope", 6.99, 15, "#");
@@ -18,11 +21,7 @@
     localStorage.setItem("fruitList", JSON.stringify(fruitList));
 
     const handleWish = (fruitID) => {
-		var currentProfile = JSON.parse(sessionStorage.getItem("LoggedInUser"));
-		var localWishList = currentProfile.getWishList();
-		localWishList.push(fruitID);
-		currentProfile.wishList = localWishList;
-		sessionStorage.setItem("LoggedInUser", JSON.stringify(currentProfile));
+		console.log(fruitID)
 	}
 </script>
 
@@ -39,7 +38,7 @@
 				<br>
 			</div>
 			<div class="wishlistButton">
-				<button class="addWishlist" on:click={() => handleWish(Fruit.id)}>Add to WishList</button>
+				<button class="addWishlist" on:click={() => handleWish(tree.id)}>Add to WishList</button>
 			</div></div>
     {/each}
 </div>
