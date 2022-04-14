@@ -1,14 +1,6 @@
 <script>
 	import NavigationBar from './components/NavigationBar.svelte'
-	class Fruit{
-		constructor(name, fruitType, price, quanity, img){
-			this.name =name;
-			this.fruitType = fruitType;
-			this.price = price;
-			this.quanity = quanity;
-			this.img = img;
-		}
-	}
+	
 </script>
 
 <main>
@@ -18,7 +10,7 @@
 
 </main>
 <footer>
-	<p>Authors: <br>
+	<p>Authors: 
 		Benjamin Kamish, Marco Kosasih, William</p>
   </footer>
 
