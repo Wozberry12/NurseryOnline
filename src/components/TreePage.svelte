@@ -1,19 +1,19 @@
 <script>
-    class Tree{
-		constructor(id, name, treeType, price, quantity, img){
+    class Item{
+		constructor(id, name, Type, price, quanity, img){
 			this.id = id;
 			this.name =name;
-			this.treeType = treeType;
+			this.Type = Type;
 			this.price = price;
-			this.quantity = quantity;
+			this.quanity = quanity;
 			this.img = img;
 		}
 	}
 	
-	var bonsai = new Tree(2001, "Bonsai Tree", "Bonsai", 999.99, 2, "https://m.media-amazon.com/images/I/716E7FNKtFL._AC_SX569_.jpg");
-	var dragon = new Tree(2002, "Dragon Tree", "Caesalpinia", 3.75, 30, "https://i5.walmartimages.com/asr/0149db71-df23-4dc8-9995-205fb5acfbd2.284e3ef8e9998c0dfc4330141cf5f0ee.jpeg");
-	var palm = new Tree(2003, "Parlor Palm", "Chamaedora elegans", 6.99, 15, "https://images.thdstatic.com/productImages/9fcb04c0-aff8-406c-afbe-ce886879ce58/svn/indoor-plants-4-palm-parlor-64_1000.jpg");
-	var candelabra = new Tree(2004, "African Candelabra", "Pineapple", 5.45, 29, "https://i.etsystatic.com/20034067/r/il/ff969a/1852472466/il_fullxfull.1852472466_m4eb.jpg");
+	var bonsai = new Item(2001, "Bonsai Tree", "Bonsai", 999.99, 2, "https://m.media-amazon.com/images/I/716E7FNKtFL._AC_SX569_.jpg");
+	var dragon = new Item(2002, "Dragon Tree", "Caesalpinia", 3.75, 30, "https://i5.walmartimages.com/asr/0149db71-df23-4dc8-9995-205fb5acfbd2.284e3ef8e9998c0dfc4330141cf5f0ee.jpeg");
+	var palm = new Item(2003, "Parlor Palm", "Chamaedora elegans", 6.99, 15, "https://images.thdstatic.com/productImages/9fcb04c0-aff8-406c-afbe-ce886879ce58/svn/indoor-plants-4-palm-parlor-64_1000.jpg");
+	var candelabra = new Item(2004, "African Candelabra", "Pineapple", 5.45, 29, "https://i.etsystatic.com/20034067/r/il/ff969a/1852472466/il_fullxfull.1852472466_m4eb.jpg");
 	var treeList = [bonsai, dragon, palm, candelabra];
     localStorage.setItem("treeList", JSON.stringify(treeList));
 
@@ -24,6 +24,7 @@
 		currentProfile.wishList = localWishList;
 		sessionStorage.setItem("currentlyLogedIn", JSON.stringify(currentProfile));
 	}
+
 </script>
 
 <div id="itemList">
