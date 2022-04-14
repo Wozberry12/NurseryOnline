@@ -34,7 +34,9 @@
 				Quantity {tree.quantity}
 				<br>
 			</div>
-			<button class="addWishlist" on:click={() => handleWish(tree.id)}>Add to WishList</button>
+			<div class="wishlistButton">
+				<button class="addWishlist" on:click={() => handleWish(tree.id)}>Add to WishList</button>
+			</div>
 		</div>
     {/each}
 </div>

@@ -34,7 +34,8 @@
 				Quantity {fruit.quanity}
 				<br>
 			</div>
-			<button class="addWishlist" on:click={() => handleWish(fruit.id)}>Add to WishList</button>
-		</div>
+			<div class="wishlistButton">
+				<button class="addWishlist" on:click={() => handleWish(tree.id)}>Add to WishList</button>
+			</div></div>
     {/each}
 </div>
