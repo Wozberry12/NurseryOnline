@@ -32,10 +32,10 @@
             }
         }
         if(loggedIn === true){
-            console.log("You are Logged in");
+            window.alert("You are Logged in");
         }
         else if(loggedIn == false){
-            console.log("Account " + usernameLogin + " is not found");
+            window.alert("Account " + usernameLogin + " is not found");
         }
 	}
     
