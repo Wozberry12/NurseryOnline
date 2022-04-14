@@ -23,9 +23,6 @@
         }
         console.log(JSON.parse(localStorage.getItem("LoggedInUser")));   
     }
-    
-        
-    
 
 </script>
 
@@ -40,4 +37,8 @@
         <input type="text" id="password" name="password"><br>
         <input type="submit" id="submit" value="Submit" onclick="login();">
     </form>
+    
+    <div class="loginButton"
+        ><button class="addWishlist" on:click={() => handleLogin()}>Login</button>
+    </div>
 </div>
