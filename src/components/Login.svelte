@@ -19,6 +19,10 @@
         }
         console.log(JSON.parse(localStorage.getItem("LoggedInUser")));
     }
+
+    const handleWish = () => {
+		console.log()
+	}
 </script>
 
 <div id="titleBar">
@@ -32,4 +36,8 @@
         <input type="text" id="password" name="password"><br>
         <input type="submit" id="submit" value="Submit" onclick="accountConfirm();">
     </form>
+    
+    <div class="loginButton"
+        ><button class="addWishlist" on:click={() => handleLogin()}>Login</button>
+    </div>
 </div>
