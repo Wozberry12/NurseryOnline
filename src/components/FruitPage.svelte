@@ -11,15 +11,17 @@
 			this.price = price;
 			this.quanity = quanity;
 			this.img = img;
+			this.review = review
 			
 		}
 	}
 	
-	
-	var goldenDelicous = new Item(1001, "Golden Delicous Apple", "Apple", 4.50, 25, "https://www.applesfromny.com/wp-content/uploads/2020/06/Golden-DeliciousNEW.png";
-	var grannySmith = new Item(1002, "Granny Smith Apple", "Apple", 3.75, 30, "#";
-	var cantelope = new Item(1003, "Cantelope", "Cantelope", 6.99, 15, "#");
-	var pineApple = new Item(1004, "Pineapple", "Pineapple", 5.45, 29, "#");
+
+	var review = [];
+	var goldenDelicous = new Item(1001, "Golden Delicous Apple", "Apple", 4.50, 25, "https://www.applesfromny.com/wp-content/uploads/2020/06/Golden-DeliciousNEW.png", review);
+	var grannySmith = new Item(1002, "Granny Smith Apple", "Apple", 3.75, 30, "#",review);
+	var cantelope = new Item(1003, "Cantelope", "Cantelope", 6.99, 15, "#",review);
+	var pineApple = new Item(1004, "Pineapple", "Pineapple", 5.45, 29, "#",review);
 	var fruitList = [goldenDelicous, grannySmith, cantelope, pineApple];
     localStorage.setItem("fruitList", JSON.stringify(fruitList));
 
