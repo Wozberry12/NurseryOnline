@@ -33,6 +33,10 @@
 		console.log(currentProfile.wishList);
 		sessionStorage.setItem("currentlyLogedIn", JSON.stringify(currentProfile));
 	}
+
+const handleReview = (tree) => {
+	
+}
 </script>
 
 <div id="itemList">
@@ -47,8 +51,9 @@
 				Quantity {fruit.quanity}
 				<br>
 			</div>
-			<div class="wishlistButton">
+			<div class="itemButtonButton">
 				<button class="addWishlist" on:click={() => handleWish(fruit)}>Add to WishList</button>
+				<button class="viewReview" on:click={() => handleReview(fruit)}>View Reviews</button>
 			</div></div>
     {/each}
 </div>

@@ -28,8 +28,10 @@
 		currentProfile.wishList = localWishList;
 		console.log(currentProfile.wishList);
 		sessionStorage.setItem("currentlyLogedIn", JSON.stringify(currentProfile));
-		
-		
+	}
+
+	const handleReview = (tree) => {
+
 	}
 
 </script>
@@ -46,8 +48,10 @@
 				Quantity {tree.quantity}
 				<br>
 			</div>
-			<div class="wishlistButton">
+			<div class="itemButton">
 				<button class="addWishlist" on:click={() => handleWish(tree)}>Add to WishList</button>
+				<button class="viewReview" on:click={() => handleReview(tree)}>View Reviews</button>
+				
 			</div>
 		</div>
     {/each}

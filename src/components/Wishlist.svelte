@@ -6,6 +6,16 @@
 
 <div class="userWishList">
     {#each itemList as item}
-        <h1>{item.name}</h1>
+    <div class="container">
+        <img  class="itemImage" src={item.img} alt={item.name}>
+        <div class="itemDescription">
+            Name:{item.name}
+            <br>
+            Price: {item.price}
+            <br>
+            Quantity {item.quantity}
+            <br>
+        </div>
+    </div>
     {/each}
 </div>
