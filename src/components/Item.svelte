@@ -1,0 +1,13 @@
+<script>
+    export class Item{
+		constructor(id, name, Type, price, quanity, img){
+			this.id = id;
+			this.name =name;
+			this.Type = Type;
+			this.price = price;
+			this.quanity = quanity;
+			this.img = img;
+		}
+	}
+    
+</script>
