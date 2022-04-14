@@ -14,26 +14,18 @@
     var wishList = [];
     var account1 = new profile("marco", "marcopassword", wishList);
     var account2 = new profile("ben", "benpassword", wishList);
-    var localAccounts = [account1, account2];
+    var localAccounts = [];
+    localAccounts = [account1, account2];
     localStorage.setItem("Accounts", JSON.stringify(localAccounts));
     
     var submitBTN = document.getElementById("submit");
     var loginFrom = document.getElementById("loginForm");
-    // function login(){
-    //     var username = loginForm.username.value;
-    //     var password = loginForm.username.value;
-    //     for(var i = 0; i < localAccounts.length; i++){
-    //         if(localAccounts[i].username == username && localAccounts[i].passowrd == password){
-    //             localStorage.setItem("LoggedInUser", JSON.stringify(username));
-    //         }
-    //     }
-    //     console.log(JSON.parse(localStorage.getItem("LoggedInUser")));   
-    // }
+
     const handleLogin = (usernameLogin, passwordLogin) => {
         var loggedIn = false;
-		//var accountsList = localStorage.getItem("Accounts");
-        for(var i = 0; i < localAccounts.length; i++){
-            if(localAccounts[i].username == usernameLogin && localAccounts[i].password == passwordLogin){
+		var accountsList = localStorage.getItem("Accounts");
+        for(var i = 0; i < accountsList.length; i++){
+            if(accountsList[i].username == usernameLogin && accountsList[i].password == passwordLogin){
                 sessionStorage.setItem("currentlyLogedIn", usernameLogin);
                 loggedIn = true;
             }
