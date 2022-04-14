@@ -20,18 +20,18 @@
 	var pineApple = new Item(1004, "Pineapple", "Pineapple", 5.45, 29, "#");
 	var fruitList = [goldenDelicous, grannySmith, cantelope, pineApple];
     localStorage.setItem("fruitList", JSON.stringify(fruitList));
-
+	
     const handleWish = (fruit) => {
-		console.log(JSON.parse(localStorage.getItem("fruitList")));
+		console.log(JSON.parse(localStorage.getItem("fruitList")));		
 		console.log(JSON.parse(sessionStorage.getItem("currentlyLogedIn")));
 		var currentProfile = JSON.parse(sessionStorage.getItem("currentlyLogedIn"));
-		//console.log(currentProfile);
-		var localWishList = currentProfile.getWishList();
+		var localWishList = currentProfile.wishList;
 		localWishList.push(fruit);
+		console.log(localWishList);
+		console.log(currentProfile.username);
 		currentProfile.wishList = localWishList;
+		console.log(currentProfile.wishList);
 		sessionStorage.setItem("currentlyLogedIn", JSON.stringify(currentProfile));
-		// var test = JSON.parse(sessionStorage.getItem("currentlyLogedIn"));
-		// console.log(test.getWishList());
 	}
 </script>
 
