@@ -19,27 +19,30 @@
     
     var submitBTN = document.getElementById("submit");
     var loginFrom = document.getElementById("loginForm");
-    function login(){
-        var username = loginForm.username.value;
-        var password = loginForm.username.value;
+    // function login(){
+    //     var username = loginForm.username.value;
+    //     var password = loginForm.username.value;
+    //     for(var i = 0; i < localAccounts.length; i++){
+    //         if(localAccounts[i].username == username && localAccounts[i].passowrd == password){
+    //             localStorage.setItem("LoggedInUser", JSON.stringify(username));
+    //         }
+    //     }
+    //     console.log(JSON.parse(localStorage.getItem("LoggedInUser")));   
+    // }
+    const handleLogin = (usernameLogin, passwordLogin) => {
+        var loggedIn = false;
+		//var accountsList = localStorage.getItem("Accounts");
         for(var i = 0; i < localAccounts.length; i++){
-            if(localAccounts[i].username == username && localAccounts[i].passowrd == password){
-                localStorage.setItem("LoggedInUser", JSON.stringify(username));
+            if(localAccounts[i].username == usernameLogin && localAccounts[i].password == passwordLogin){
+                sessionStorage.setItem("currentlyLogedIn", usernameLogin);
+                loggedIn = true;
             }
         }
-        console.log(JSON.parse(localStorage.getItem("LoggedInUser")));   
-    }
-    const handleLogin = (usernameLogin, passwordLogin) => {
-		var accountsList = localStorage.getItem("Accounts");
-        for(var i = 0; i < accountsList.length; i++){
-            if(accountsList[i].username == usernameLogin && accountsList[i].password == passwordLogin){
-                sessionStorage.setItem("currentlyLogedIn", usernameLogin);
-            }
-            else{
-                console.log("Account " + usernameLogin + " is not found");
-            }
+        if(loggedIn == false){
+            console.log("Account " + usernameLogin + " is not found");
         }
 	}
+    
 </script>
 
 <div id="titleBar">
