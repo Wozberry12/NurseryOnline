@@ -35,7 +35,7 @@
 				<br>
 			</div>
 			<div class="wishlistButton">
-				<button class="addWishlist" on:click={() => handleWish(tree.id)}>Add to WishList</button>
+				<button class="addWishlist" on:click={() => handleWish(Fruit.id)}>Add to WishList</button>
 			</div></div>
     {/each}
 </div>
