@@ -1,6 +1,7 @@
 <script>
     let usernameLogin;
     let passwordLogin;
+    
     class profile{
         constructor(username, password, wishList){
             this.username = username;
@@ -15,6 +16,7 @@
     var account1 = new profile("marco", "marcopassword", wishList);
     var account2 = new profile("ben", "benpassword", wishList);
     var localAccounts = [];
+    var loggedInProfile = [];
     localAccounts = [account1, account2];
     localStorage.setItem("Accounts", JSON.stringify(localAccounts));
 
@@ -23,7 +25,9 @@
 		var accountsList = JSON.parse(localStorage.getItem("Accounts"));
         for(var i = 0; i < accountsList.length; i++){
             if(accountsList[i].username == usernameLogin && accountsList[i].password == passwordLogin){
-                sessionStorage.setItem("currentlyLogedIn", usernameLogin);
+                
+                sessionStorage.setItem("currentlyLogedIn", JSON.stringify(accountsList[i]));
+                
                 loggedIn = true;
             }
         }

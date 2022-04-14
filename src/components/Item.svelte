@@ -1,5 +1,7 @@
 <script>
-    export class Item{
+    import { writable } from 'svelte/store'
+    
+    class Item{
 		constructor(id, name, Type, price, quanity, img){
 			this.id = id;
 			this.name =name;

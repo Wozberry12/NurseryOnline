@@ -18,11 +18,18 @@
     localStorage.setItem("treeList", JSON.stringify(treeList));
 
     const handleWish = (tree) => {
+		console.log(JSON.parse(localStorage.getItem("fruitList")));		
+		console.log(JSON.parse(sessionStorage.getItem("currentlyLogedIn")));
 		var currentProfile = JSON.parse(sessionStorage.getItem("currentlyLogedIn"));
-		var localWishList = currentProfile.getWishList();
+		var localWishList = currentProfile.wishList;
 		localWishList.push(tree);
+		console.log(localWishList);
+		console.log(currentProfile.username);
 		currentProfile.wishList = localWishList;
+		console.log(currentProfile.wishList);
 		sessionStorage.setItem("currentlyLogedIn", JSON.stringify(currentProfile));
+		
+		
 	}
 
 </script>

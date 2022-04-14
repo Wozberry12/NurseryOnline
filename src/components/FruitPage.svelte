@@ -1,5 +1,8 @@
 <script>
-    
+    // import {item} from './Item.svelte'
+	// export const item = new item();
+	
+
 	class Item{
 		constructor(id, name, Type, price, quanity, img){
 			this.id = id;
@@ -19,11 +22,16 @@
     localStorage.setItem("fruitList", JSON.stringify(fruitList));
 
     const handleWish = (fruit) => {
+		console.log(JSON.parse(localStorage.getItem("fruitList")));
+		console.log(JSON.parse(sessionStorage.getItem("currentlyLogedIn")));
 		var currentProfile = JSON.parse(sessionStorage.getItem("currentlyLogedIn"));
+		//console.log(currentProfile);
 		var localWishList = currentProfile.getWishList();
 		localWishList.push(fruit);
 		currentProfile.wishList = localWishList;
 		sessionStorage.setItem("currentlyLogedIn", JSON.stringify(currentProfile));
+		// var test = JSON.parse(sessionStorage.getItem("currentlyLogedIn"));
+		// console.log(test.getWishList());
 	}
 </script>
 
