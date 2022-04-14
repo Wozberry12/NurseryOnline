@@ -17,10 +17,10 @@
 	var fruitList = [goldenDelicous, grannySmith, cantelope, pineApple];
     localStorage.setItem("fruitList", JSON.stringify(fruitList));
 
-    const handleWish = (fruitID) => {
+    const handleWish = (fruit) => {
 		var currentProfile = JSON.parse(sessionStorage.getItem("currentlyLogedIn"));
 		var localWishList = currentProfile.getWishList();
-		localWishList.push(fruitID);
+		localWishList.push(fruit);
 		currentProfile.wishList = localWishList;
 		sessionStorage.setItem("currentlyLogedIn", JSON.stringify(currentProfile));
 	}
@@ -39,7 +39,7 @@
 				<br>
 			</div>
 			<div class="wishlistButton">
-				<button class="addWishlist" on:click={() => handleWish(Fruit.id)}>Add to WishList</button>
+				<button class="addWishlist" on:click={() => handleWish(fruit)}>Add to WishList</button>
 			</div></div>
     {/each}
 </div>
