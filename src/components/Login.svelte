@@ -1,5 +1,6 @@
-
 <script>
+    let usernameLogin;
+    let passwordLogin;
     class profile{
         constructor(username, password){
             this.username;
@@ -20,8 +21,10 @@
         console.log(JSON.parse(localStorage.getItem("LoggedInUser")));
     }
 
-    const handleWish = () => {
-		console.log()
+    const handleLogin = () => {
+		// {#if }
+
+        // {/if}
 	}
 </script>
 
@@ -31,12 +34,11 @@
 <div id="forUserInput">
     <form id="loginForm">
         <label for="username">Username</label>
-        <input type="text" id="username" name="username">
+        <input type="text" id="username" name="username" bind:value={usernameLogin}>
         <label for="password">Password</label>
-        <input type="text" id="password" name="password"><br>
-        <input type="submit" id="submit" value="Submit" onclick="accountConfirm();">
+        <input type="text" id="password" name="password" bind:value={passwordLogin}><br>
     </form>
-    
+
     <div class="loginButton"
         ><button class="addWishlist" on:click={() => handleLogin()}>Login</button>
     </div>
