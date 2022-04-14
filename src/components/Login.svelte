@@ -16,13 +16,13 @@
     var account2 = new profile("ben", "benpassword", wishList);
     var localAccounts = [];
     localAccounts = [account1, account2];
-    //localStorage.setItem("Accounts", JSON.stringify(localAccounts));
+    localStorage.setItem("Accounts", JSON.stringify(localAccounts));
 
     const handleLogin = (usernameLogin, passwordLogin) => {
         var loggedIn = false;
-		//var accountsList = localStorage.getItem("Accounts");
-        for(var i = 0; i < localAccounts.length; i++){
-            if(localAccounts[i].username == usernameLogin && localAccounts[i].password == passwordLogin){
+		var accountsList = JSON.parse(localStorage.getItem("Accounts"));
+        for(var i = 0; i < accountsList.length; i++){
+            if(accountsList[i].username == usernameLogin && accountsList[i].password == passwordLogin){
                 sessionStorage.setItem("currentlyLogedIn", usernameLogin);
                 loggedIn = true;
             }
