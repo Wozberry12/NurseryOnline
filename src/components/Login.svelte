@@ -29,7 +29,10 @@
         }
         console.log(JSON.parse(localStorage.getItem("LoggedInUser")));   
     }
-
+    const handleLogin = (usernameLogin, passwordLogin) => {
+		var accountsList = localStorage.getItem("Accounts");
+        sessionStorage.setItem("currentlyLogedIn", usernameLogin);
+	}
 </script>
 
 <div id="titleBar">
@@ -40,11 +43,11 @@
         <label for="username">Username</label>
         <input type="text" id="username" name="username" bind:value={usernameLogin}>
         <label for="password">Password</label>
-        <input type="text" id="password" name="password"><br>
-        <input type="submit" id="submit" value="Submit" onclick="login();">
+        <input type="text" id="password" name="password" bind:value={passwordLogin}><br>
+        <!-- <input type="submit" id="submit" value="Submit" onclick="login();"> -->
     </form>
 
     <div class="loginButton"
-        ><button class="addWishlist" on:click={() => handleLogin()}>Login</button>
+        ><button class="addWishlist" on:click={() => handleLogin(usernameLogin, passwordLogin)}>Login</button>
     </div>
 </div>
