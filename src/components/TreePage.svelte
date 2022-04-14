@@ -17,8 +17,12 @@
 	var treeList = [bonsai, dragon, palm, candelabra];
     localStorage.setItem("treeList", JSON.stringify(treeList));
 
-    const handleWish = (treeID) => {
-		console.log(treeID)
+    const handleWish = (tree) => {
+		var currentProfile = JSON.parse(sessionStorage.getItem("currentlyLogedIn"));
+		var localWishList = currentProfile.getWishList();
+		localWishList.push(tree);
+		currentProfile.wishList = localWishList;
+		sessionStorage.setItem("currentlyLogedIn", JSON.stringify(currentProfile));
 	}
 </script>
 
@@ -35,7 +39,7 @@
 				<br>
 			</div>
 			<div class="wishlistButton">
-				<button class="addWishlist" on:click={() => handleWish(tree.id)}>Add to WishList</button>
+				<button class="addWishlist" on:click={() => handleWish(tree)}>Add to WishList</button>
 			</div>
 		</div>
     {/each}
