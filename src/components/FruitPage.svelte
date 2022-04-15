@@ -23,11 +23,11 @@
 	var grape = new Item(1005, "Concord Grape", "Grape", 15.99, 30, "https://cdn.shopify.com/s/files/1/0004/4426/8609/products/Concord-Grapes_v2_400x400.jpg?v=1537881231");
 	var orange = new Item(1006, "Blood Orange", "Orange", 39.99, 48, "https://images.heb.com/is/image/HEBGrocery/000377507");
 	var watermelon = new Item(1007, "Square Watermelon", "Watermelon", 27.99, 30, "https://atlas-content1-cdn.pixelsquid.com/assets_v2/242/2421099256203974413/jpeg-600/G03.jpg");
-	var item8 = new Item(1008, "", "", 29.99, 8, "");
+	var rambutan = new Item(1008, "Rambutan", "Rambutan", 9.99, 8, "https://produits.bienmanger.com/38127-0w600h600_Rambutan.jpg");
 	var item9 = new Item(1009, "", "", 33.99, 14, "");
 	var item10 = new Item(1010, "", "", 49.99, 17, "");
 
-	var fruitList = [goldenDelicous, grannySmith, cantelope, pineapple, grape, orange, watermelon];
+	var fruitList = [goldenDelicous, grannySmith, cantelope, pineapple, grape, orange, watermelon, rambutan];
 	localStorage.setItem("fruitList", JSON.stringify(fruitList));
 
     const handleWish = (fruit) => {
