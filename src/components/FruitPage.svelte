@@ -1,7 +1,6 @@
 <script>
     // import {item} from './Item.svelte'
 	// export const item = new item();
-	
 
 	class Item{
 		constructor(id, name, Type, price, quanity, img, review){
@@ -67,6 +66,7 @@
 				<button class="addWishlist" on:click={() => handleWish(fruit)}>Add to WishList</button>
 				<br>
 				<button class="viewReview" on:click={() => handleReview(fruit)}>View Reviews</button>
-			</div></div>
+			</div>
+		</div>
     {/each}
 </div>
