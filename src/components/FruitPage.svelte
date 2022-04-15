@@ -15,18 +15,26 @@
 			
 		}
 	}
+	class Review{
+		constructor(rating, description, starImg, nameOfReviewer){
+			this.rating = rating;
+			this.description = description;
+			this.starImg = starImg;
+			this.nameOfReviewer = nameOfReviewer;
+		}
+	}
 	
 	var review = [];
-	var goldenDelicous = new Item(1001, "Golden Delicous Apple", "Apple", 4.50, 25, "https://www.maxdelivery.com/nkz/gifs/60056277.jpg");
-	var grannySmith = new Item(1002, "Granny Smith Apple", "Apple", 3.75, 30, "https://i5.walmartimages.com/asr/bf2ec88a-2f36-41f2-93d3-c3161772733d_1.cdc913433c6acc6bf9201dc1fa86bac9.jpeg");
-	var cantelope = new Item(1003, "Cantelope", "Cantelope", 6.99, 15, "https://images.heb.com/is/image/HEBGrocery/000325202?fit=constrain,1&wid=800&hei=800&fmt=jpg&qlt=85,0&resMode=sharp2&op_usm=1.75,0.3,2,0");
-	var pineapple = new Item(1004, "Pineapple", "Pineapple", 5.45, 29, "https://m.media-amazon.com/images/I/71+qAJehpkL._SL1500_.jpg");
-	var grape = new Item(1005, "Concord Grape", "Grape", 15.99, 30, "https://cdn.shopify.com/s/files/1/0004/4426/8609/products/Concord-Grapes_v2_400x400.jpg?v=1537881231");
-	var orange = new Item(1006, "Blood Orange", "Orange", 39.99, 48, "https://images.heb.com/is/image/HEBGrocery/000377507");
-	var watermelon = new Item(1007, "Square Watermelon", "Watermelon", 27.99, 30, "https://atlas-content1-cdn.pixelsquid.com/assets_v2/242/2421099256203974413/jpeg-600/G03.jpg");
-	var rambutan = new Item(1008, "Rambutan", "Rambutan", 9.99, 8, "https://produits.bienmanger.com/38127-0w600h600_Rambutan.jpg");
-	var durian = new Item(1009, "Durian", "Durian", 33.99, 14, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-2_6SRJK2viP847Hy6Vcq2SUj7UkuHVZ_6k94SEB26nj01zSKrepPpqc-ylMzYXbkX7o&usqp=CAU");
-	var dragonfruit = new Item(1010, "DragonFruit", "DragonFruit", 49.99, 17, "https://cdn.shopify.com/s/files/1/0336/7167/5948/products/3-count-image-of-dragon-fruit-white-fruit-29921760706604_600x600.jpg?v=1648081574");
+	var goldenDelicous = new Item(1001, "Golden Delicous Apple", "Apple", 4.50, 25, "https://www.maxdelivery.com/nkz/gifs/60056277.jpg", review);
+	var grannySmith = new Item(1002, "Granny Smith Apple", "Apple", 3.75, 30, "https://i5.walmartimages.com/asr/bf2ec88a-2f36-41f2-93d3-c3161772733d_1.cdc913433c6acc6bf9201dc1fa86bac9.jpeg", review);
+	var cantelope = new Item(1003, "Cantelope", "Cantelope", 6.99, 15, "https://images.heb.com/is/image/HEBGrocery/000325202?fit=constrain,1&wid=800&hei=800&fmt=jpg&qlt=85,0&resMode=sharp2&op_usm=1.75,0.3,2,0", review);
+	var pineapple = new Item(1004, "Pineapple", "Pineapple", 5.45, 29, "https://m.media-amazon.com/images/I/71+qAJehpkL._SL1500_.jpg", review);
+	var grape = new Item(1005, "Concord Grape", "Grape", 15.99, 30, "https://cdn.shopify.com/s/files/1/0004/4426/8609/products/Concord-Grapes_v2_400x400.jpg?v=1537881231", review);
+	var orange = new Item(1006, "Blood Orange", "Orange", 39.99, 48, "https://images.heb.com/is/image/HEBGrocery/000377507", review);
+	var watermelon = new Item(1007, "Square Watermelon", "Watermelon", 27.99, 30, "https://atlas-content1-cdn.pixelsquid.com/assets_v2/242/2421099256203974413/jpeg-600/G03.jpg", review);
+	var rambutan = new Item(1008, "Rambutan", "Rambutan", 9.99, 8, "https://produits.bienmanger.com/38127-0w600h600_Rambutan.jpg", review);
+	var durian = new Item(1009, "Durian", "Durian", 33.99, 14, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-2_6SRJK2viP847Hy6Vcq2SUj7UkuHVZ_6k94SEB26nj01zSKrepPpqc-ylMzYXbkX7o&usqp=CAU", review);
+	var dragonfruit = new Item(1010, "DragonFruit", "DragonFruit", 49.99, 17, "https://cdn.shopify.com/s/files/1/0336/7167/5948/products/3-count-image-of-dragon-fruit-white-fruit-29921760706604_600x600.jpg?v=1648081574", review);
 
 	var fruitList = [goldenDelicous, grannySmith, cantelope, pineapple, grape, orange, watermelon, rambutan, durian, dragonfruit];
 	localStorage.setItem("fruitList", JSON.stringify(fruitList));
@@ -46,7 +54,7 @@
 		sessionStorage.setItem("currentlyLogedIn", JSON.stringify(currentProfile));
 	}
 
-	const handleReview = (tree) => {
+	const handleReview = (fruit) => {
 		
 	}
 </script>
@@ -62,6 +70,13 @@
 				<br>
 				Quantity: {fruit.quanity}
 				<br>
+			</div>
+			<div class="reviewInfo">
+				{#each fruitList as fruit}
+					{#each fruit.review as review}
+						{review.rating}
+					{/each}
+				{/each}
 			</div>
 			<div class="itemButton">
 				<button class="addWishlist" on:click={() => handleWish(fruit)}>Add to WishList</button>
