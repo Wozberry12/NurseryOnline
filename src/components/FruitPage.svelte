@@ -35,7 +35,12 @@
 		console.log(currentProfile.username);
 		currentProfile.wishList = localWishList;
 		console.log(currentProfile.wishList);
+		window.alert(fruit.name + " added to wishlist");
 		sessionStorage.setItem("currentlyLogedIn", JSON.stringify(currentProfile));
+	}
+
+	const handleReview = (tree) => {
+		
 	}
 </script>
 
@@ -44,15 +49,17 @@
         <div class="container">
 			<img  class="itemImage" src={fruit.img} alt={fruit.name}>
 			<div class="itemDescription">
-				Name:{fruit.name}
+				Name: {fruit.name}
 				<br>
 				Price: {fruit.price}
 				<br>
-				Quantity {fruit.quanity}
+				Quantity: {fruit.quanity}
 				<br>
 			</div>
-			<div class="wishlistButton">
+			<div class="itemButton">
 				<button class="addWishlist" on:click={() => handleWish(fruit)}>Add to WishList</button>
+				<br>
+				<button class="viewReview" on:click={() => handleReview(fruit)}>View Reviews</button>
 			</div></div>
     {/each}
 </div>

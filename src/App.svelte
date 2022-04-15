@@ -11,7 +11,7 @@
 </main>
 <footer>
 	<p>Authors: 
-		Benjamin Kamish, Marco Kosasih, William</p>
+		Benjamin Kamish, Marco Kosasih, William Oswald</p>
   </footer>
 
 <style>

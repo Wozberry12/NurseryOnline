@@ -86,6 +86,10 @@ button:focus {
 	width: 100%;
 	text-align: center;
 } */
+.itemButton{
+	float:right;
+	margin: 10px;
+}
 footer {
 	position: relative;
 	margin: 0;
