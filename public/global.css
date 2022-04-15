@@ -90,6 +90,9 @@ button:focus {
 	float:right;
 	margin: 10px;
 }
+.purchaseButton{
+	float: right;
+}
 footer {
 	position: relative;
 	margin: 0;
