@@ -71,7 +71,8 @@
 
 
 	
-	var fruitList = [goldenDelicous, grannySmith, cantelope, pineapple, grape, orange, watermelon, rambutan, durian, dragonfruit];
+	var baseFruitList = [goldenDelicous, grannySmith, cantelope, pineapple, grape, orange, watermelon, rambutan, durian, dragonfruit];
+	localStorage.setItem("fruitList", JSON.stringify(baseFruitList));
 	
 
 
