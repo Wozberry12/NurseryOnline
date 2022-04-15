@@ -4,6 +4,7 @@
     import About from "./About.svelte";
     import FruitList from "./FruitPage.svelte";
     import TreeList from "./TreePage.svelte"
+    import Checkout from "./Checkout.svelte"
     export let menu = 1;
 
 </script>

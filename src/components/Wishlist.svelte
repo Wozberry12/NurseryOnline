@@ -3,16 +3,23 @@
 
     var profile = JSON.parse(sessionStorage.getItem("currentlyLogedIn"));
     var itemList = profile.wishList;
-
-    const handlePurchase = (itemList) => {
-        
+    let showCheckout = false;
+    
+    const handlePurchase = () => {
+        if(showCheckout == true){
+            showCheckout = false;
+        }
+        else if(showCheckout == false){
+            showCheckout = true
+        }
     }
 </script>
 
 
 <div class="userWishList">
+
     <div class="purchaseButton">
-        <button class="purchaseWishList" on:click={() => handlePurchase(itemList)}>Purchase WishList</button>
+        <button class="purchaseWishList" on:click={() => handlePurchase()}>Purchase WishList</button>
     </div>
     {#each itemList as item}
     <div class="container">
@@ -25,6 +32,10 @@
             Quantity {item.quantity}
             <br>
         </div>
+        
     </div>
     {/each}
 </div>
+{#if {showCheckout}}
+    <Checkout {showCheckout}/>
+{/if}
