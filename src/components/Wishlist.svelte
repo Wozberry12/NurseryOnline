@@ -22,6 +22,7 @@
         <button class="purchaseWishList" on:click={() => handlePurchase()}>Purchase WishList</button>
     </div>
     {#each itemList as item}
+    var sum += {item.price}
     <div class="container">
         <img  class="itemImage" src={item.img} alt={item.name}>
         <div class="itemDescription">
@@ -35,6 +36,8 @@
         
     </div>
     {/each}
+
+    
 </div>
 {#if {showCheckout}}
     <Checkout {showCheckout}/>

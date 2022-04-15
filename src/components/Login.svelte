@@ -17,7 +17,7 @@
     var account1 = new profile("marco", "marcopassword", wishList);
     var account2 = new profile("ben", "benpassword", wishList2);
     var localAccounts = [];
-    var loggedInProfile = [];
+    //var loggedInProfile = [];
     localAccounts = [account1, account2];
     localStorage.setItem("Accounts", JSON.stringify(localAccounts));
 
