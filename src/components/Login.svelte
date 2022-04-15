@@ -13,8 +13,9 @@
         }
     }
     var wishList = [];
+    var wishList2 = [];
     var account1 = new profile("marco", "marcopassword", wishList);
-    var account2 = new profile("ben", "benpassword", wishList);
+    var account2 = new profile("ben", "benpassword", wishList2);
     var localAccounts = [];
     var loggedInProfile = [];
     localAccounts = [account1, account2];
