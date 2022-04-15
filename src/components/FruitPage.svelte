@@ -11,11 +11,12 @@
 			this.price = price;
 			this.quanity = quanity;
 			this.img = img;
+			this.review = review
 			
 		}
 	}
 	
-	
+	var review = [];
 	var goldenDelicous = new Item(1001, "Golden Delicous Apple", "Apple", 4.50, 25, "https://www.maxdelivery.com/nkz/gifs/60056277.jpg");
 	var grannySmith = new Item(1002, "Granny Smith Apple", "Apple", 3.75, 30, "https://i5.walmartimages.com/asr/bf2ec88a-2f36-41f2-93d3-c3161772733d_1.cdc913433c6acc6bf9201dc1fa86bac9.jpeg");
 	var cantelope = new Item(1003, "Cantelope", "Cantelope", 6.99, 15, "https://images.heb.com/is/image/HEBGrocery/000325202?fit=constrain,1&wid=800&hei=800&fmt=jpg&qlt=85,0&resMode=sharp2&op_usm=1.75,0.3,2,0");
@@ -29,6 +30,7 @@
 
 	var fruitList = [goldenDelicous, grannySmith, cantelope, pineapple, grape, orange, watermelon, rambutan];
 	localStorage.setItem("fruitList", JSON.stringify(fruitList));
+
 
     const handleWish = (fruit) => {
 		console.log(JSON.parse(localStorage.getItem("fruitList")));		
