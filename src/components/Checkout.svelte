@@ -8,7 +8,7 @@
 
 {#if showCheckout}
     <div class="checkoutDiv">
-
+hi
     </div>
 {/if}
 

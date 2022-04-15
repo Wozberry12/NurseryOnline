@@ -3,8 +3,14 @@
 
     var profile = JSON.parse(sessionStorage.getItem("currentlyLogedIn"));
     var itemList = profile.wishList;
+    var sum;
     let showCheckout = false;
     
+    itemList.forEach(item => {
+        console.log(sum);
+        sum += item.price
+    });
+
     const handlePurchase = () => {
         if(showCheckout == true){
             showCheckout = false;
@@ -35,7 +41,9 @@
         
     </div>
     {/each}
-
+    <div class="totalPrice">
+        totalPrice = {sum};
+    </div>
     
 </div>
 {#if {showCheckout}}
