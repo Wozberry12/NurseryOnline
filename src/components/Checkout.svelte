@@ -6,7 +6,7 @@
     let profileCardNumber = "";
 
     const handleConfirm = (profileName, profileAddress, profileCardNumber) =>{
-
+        
     }
 </script>
 
@@ -22,7 +22,7 @@
         </form>
     </div>
     <div class="confirm">
-        <button class="addWishlist" on:click={() => handleConfirm(profileName, profileAddress, profileCardNumber)}>Login</button>
+        <button class="addWishlist" on:click={() => handleConfirm(profileName, profileAddress, profileCardNumber)}>Place Order</button>
     </div>
 {/if}
 

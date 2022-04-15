@@ -111,7 +111,7 @@
 </script>
 
 <div id="itemList">
-    {#each fruitList as fruit}
+    {#each baseFruitList as fruit}
         <div class="container">
 			<img  class="itemImage" src={fruit.img} alt={fruit.name}>
 			<div class="itemDescription">

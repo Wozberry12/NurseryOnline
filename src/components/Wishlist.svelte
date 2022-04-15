@@ -35,7 +35,7 @@
             <br>
             Price: {item.price}
             <br>
-            Quantity {item.quantity}
+            Quantity {item.quanity}
             <br>
         </div>
         
