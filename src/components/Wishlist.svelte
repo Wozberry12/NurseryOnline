@@ -3,11 +3,11 @@
 
     var profile = JSON.parse(sessionStorage.getItem("currentlyLogedIn"));
     var itemList = profile.wishList;
-    var sum;
+    var sum = 0;
     let showCheckout = false;
     
     itemList.forEach(item => {
-        console.log(sum);
+        console.log(item.price);
         sum += item.price
     });
 
@@ -47,5 +47,13 @@
     
 </div>
 {#if {showCheckout}}
-    <Checkout {showCheckout}/>
+    <Checkout showCheckout={showCheckout}/>
 {/if}
+
+<style>
+    .totalPrice{
+        float: right;
+        margin-right: 50px;
+        border-color: black ;
+    }
+</style>

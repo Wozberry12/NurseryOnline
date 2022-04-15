@@ -54,7 +54,7 @@
         <!-- <input type="submit" id="submit" value="Submit" onclick="login();"> -->
     </form>
 
-    <div class="loginButton"
-        ><button class="addWishlist" on:click={() => handleLogin(usernameLogin, passwordLogin)}>Login</button>
+    <div class="loginButton">
+        <button class="addWishlist" on:click={() => handleLogin(usernameLogin, passwordLogin)}>Login</button>
     </div>
 </div>
