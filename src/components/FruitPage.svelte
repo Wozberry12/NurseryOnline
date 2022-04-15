@@ -20,9 +20,11 @@
 	var grannySmith = new Item(1002, "Granny Smith Apple", "Apple", 3.75, 30, "https://i5.walmartimages.com/asr/bf2ec88a-2f36-41f2-93d3-c3161772733d_1.cdc913433c6acc6bf9201dc1fa86bac9.jpeg");
 	var cantelope = new Item(1003, "Cantelope", "Cantelope", 6.99, 15, "https://images.heb.com/is/image/HEBGrocery/000325202?fit=constrain,1&wid=800&hei=800&fmt=jpg&qlt=85,0&resMode=sharp2&op_usm=1.75,0.3,2,0");
 	var pineapple = new Item(1004, "Pineapple", "Pineapple", 5.45, 29, "https://m.media-amazon.com/images/I/71+qAJehpkL._SL1500_.jpg");
-	
-	var fruitList = [goldenDelicous, grannySmith, cantelope, pineapple];
-    localStorage.setItem("fruitList", JSON.stringify(fruitList));
+	var grape = new Item(1005, "Concord Grape", "Grape", 15.99, 30, "https://cdn.shopify.com/s/files/1/0004/4426/8609/products/Concord-Grapes_v2_400x400.jpg?v=1537881231");
+	var orange = new Item(1006, "Blood Orange", "Orange", 39.99, 48, "https://images.heb.com/is/image/HEBGrocery/000377507");
+
+	var fruitList = [goldenDelicous, grannySmith, cantelope, pineapple, grape, orange];
+	localStorage.setItem("fruitList", JSON.stringify(fruitList));
 
     const handleWish = (fruit) => {
 		console.log(JSON.parse(localStorage.getItem("fruitList")));		
@@ -48,11 +50,11 @@
         <div class="container">
 			<img  class="itemImage" src={fruit.img} alt={fruit.name}>
 			<div class="itemDescription">
-				Name:{fruit.name}
+				Name: {fruit.name}
 				<br>
 				Price: {fruit.price}
 				<br>
-				Quantity {fruit.quanity}
+				Quantity: {fruit.quanity}
 				<br>
 			</div>
 			<div class="itemButton">
