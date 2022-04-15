@@ -1,11 +1,14 @@
 <script>
+    import Checkout from "./Checkout.svelte"
+
     var profile = JSON.parse(sessionStorage.getItem("currentlyLogedIn"));
     var itemList = profile.wishList;
 
     const handlePurchase = (itemList) => {
-	
+        
     }
 </script>
+
 
 <div class="userWishList">
     <div class="purchaseButton">
