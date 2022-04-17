@@ -72,10 +72,11 @@
 
 	var baseFruitList = [goldenDelicous, grannySmith, cantelope, pineapple, grape, orange, watermelon, rambutan, durian, dragonfruit];
 
-	var currentFruiList = JSON.parse(localStorage.getItem("fruitList"));
+	var currentFruitList = JSON.parse(localStorage.getItem("fruitList"));
 	var newFruitList = [];
-	for(let fruitOld of baseFruitList){
-            for(let fruitNew of currentFruiList){
+	if(currentFruitList != null){
+		for(let fruitOld of baseFruitList){
+            for(let fruitNew of currentFruitList){
                 if(fruitNew.id === fruitOld.id){
 					if(fruitNew.quanity <= fruitOld.quanity){
 						newFruitList.push(fruitNew);
@@ -84,9 +85,13 @@
                 }
             }
         }
-
-	localStorage.setItem("fruitList", JSON.stringify(newFruitList));
+	}else if(currentFruitList == null){
+		for(let fruit of baseFruitList){
+			newFruitList.push(fruit);
+		}
+	}
 	
+	localStorage.setItem("fruitList", JSON.stringify(newFruitList));
 
 
     const handleWish = (fruit) => {
@@ -115,9 +120,13 @@
 		sessionStorage.setItem("currentlyLogedIn", JSON.stringify(currentProfile));
 	}
 
+	const reviewDiv = document.getElementById("reviewInfo");
 	const handleReview = (fruit) => {
-		
-
+		if(reviewDiv.style.display !== "none"){
+			reviewDiv.style.display = "none"
+		} else {
+			reviewDiv.style.display = "block"
+		}
 	}
 	
 	const handleAddReview = (fruit) =>{
@@ -154,7 +163,7 @@
 					{reviews.description}
 				{/each}
 			</div>
-			<div id="addReview">
+			<div id="addReview">	
 				<form id="addReviewForm">
 					<label for="name">Name:</label>
 					<input type="text" id="name" name="name" bind:value={name}>
@@ -168,7 +177,7 @@
 			<div class="itemButton">
 				<button class="addWishlist" on:click={() => handleWish(fruit)}>Add to WishList</button>
 				<br>
-				<button class="viewReview" on:click={() => handleReview(fruit)}>View Reviews</button>
+				<button id="viewReview" on:click={() => handleReview(fruit)}>View Reviews</button>
 				<button class="addReview" on:click={() => handleAddReview(fruit)}>Add Review</button>
 			</div>
 		</div>
