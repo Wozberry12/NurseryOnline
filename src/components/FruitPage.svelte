@@ -12,8 +12,7 @@
 			this.price = price;
 			this.quanity = quanity;
 			this.img = img;
-			this.reviews = reviews
-			
+			this.reviews = reviews;
 		}
 	}
 	class Review{
@@ -70,22 +69,47 @@
 	dragonfruit.reviews.push(newReview10);
 
 
-	
 	var baseFruitList = [goldenDelicous, grannySmith, cantelope, pineapple, grape, orange, watermelon, rambutan, durian, dragonfruit];
-	localStorage.setItem("fruitList", JSON.stringify(baseFruitList));
+
+	var currentFruiList = JSON.parse(localStorage.getItem("fruitList"));
+	var newFruitList = [];
+	for(let fruitOld of baseFruitList){
+            for(let fruitNew of currentFruiList){
+                if(fruitNew.id === fruitOld.id){
+					if(fruitNew.quanity <= fruitOld.quanity){
+						newFruitList.push(fruitNew);
+					}
+					else(newFruitList.push(fruitOld))
+                }
+            }
+        }
+
+	localStorage.setItem("fruitList", JSON.stringify(newFruitList));
 	
 
 
     const handleWish = (fruit) => {
-		console.log(JSON.parse(localStorage.getItem("fruitList")));		
-		console.log(JSON.parse(sessionStorage.getItem("currentlyLogedIn")));
+		// console.log(JSON.parse(localStorage.getItem("fruitList")));		
+		// console.log(JSON.parse(sessionStorage.getItem("currentlyLogedIn")));
 		var currentProfile = JSON.parse(sessionStorage.getItem("currentlyLogedIn"));
 		var localWishList = currentProfile.wishList;
+
+		// for(let item of localWishList){
+		// 	if(item.id === fruit.id){
+		// 		fruit.quanityWish += 1;
+		// 		console.log(fruit.quanityWish);
+		// 		console.log(localWishList);
+		// 		item.quanityWish = fruit.quanityWish;
+		// 		localWishList = localWishList;
+		// 		localWishList.push(fruit);
+		// 		return;
+		// 	}
+		// }
 		localWishList.push(fruit);
-		console.log(localWishList);
-		console.log(currentProfile.username);
+		// console.log(localWishList);
+		// console.log(currentProfile.username);
 		currentProfile.wishList = localWishList;
-		console.log(currentProfile.wishList);
+		// console.log(currentProfile.wishList);
 		window.alert(fruit.name + " added to wishlist");
 		sessionStorage.setItem("currentlyLogedIn", JSON.stringify(currentProfile));
 	}
@@ -97,7 +121,7 @@
 	
 	const handleAddReview = (fruit) =>{
 		var localList = JSON.parse(localStorage.getItem("fruitList"));
-		for(var i = 0; i < fruitList.length; i++){
+		for(var i = 0; i < localList.length; i++){
 			if(localList[i].id == fruit.id){
 				var addedReview = new Review(rating, description,"#", name);
 				fruit.reviews.push(addedReview);
@@ -111,7 +135,7 @@
 </script>
 
 <div id="itemList">
-    {#each baseFruitList as fruit}
+    {#each newFruitList as fruit}
         <div class="container">
 			<img  class="itemImage" src={fruit.img} alt={fruit.name}>
 			<div class="itemDescription">

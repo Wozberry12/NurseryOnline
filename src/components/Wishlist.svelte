@@ -7,7 +7,7 @@
     let showCheckout = false;
     
     itemList.forEach(item => {
-        console.log(item.price);
+        // console.log(item.price);
         sum += item.price
     });
 
@@ -35,8 +35,9 @@
             <br>
             Price: {item.price}
             <br>
-            Quantity {item.quanity}
+            Quantity: {item.quanity}
             <br>
+            
         </div>
         
     </div>
@@ -48,6 +49,7 @@
 </div>
 {#if {showCheckout}}
     <Checkout showCheckout={showCheckout}/>
+    <!-- <Checkout showCheckout={showCheckout} itemList={itemList}/> -->
 {/if}
 
 <style>

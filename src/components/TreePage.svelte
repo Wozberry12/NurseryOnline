@@ -1,11 +1,11 @@
 <script>
     class Item{
-		constructor(id, name, Type, price, quantity, img){
+		constructor(id, name, Type, price, quanity, img){
 			this.id = id;
 			this.name =name;
 			this.Type = Type;
 			this.price = price;
-			this.quantity = quantity;
+			this.quanity = quanity;
 			this.img = img;
 		}
 	}
@@ -21,11 +21,26 @@
 	var item9 = new Item(2009, "", "", 33.99, 14, "");
 	var item10 = new Item(2010, "", "", 49.99, 17, "");
 	
-	var treeList = [bonsai, dragon, palm, candelabra, olive];
-    localStorage.setItem("treeList", JSON.stringify(treeList));
+	var treeListOld = [bonsai, dragon, palm, candelabra, olive];
+    // localStorage.setItem("treeList", JSON.stringify(treeList));
+
+	var treeListCurrent = JSON.parse(localStorage.getItem("treeList"));
+	var treeListNew = [];
+	for(let treeOld of treeListOld){
+            for(let treeNew of treeListCurrent){
+                if(treeNew.id === treeOld.id){
+					if(treeNew.quanity <= treeOld.quanity){
+						treeListNew.push(treeNew);
+					}
+					else(treeListNew.push(treeOld))
+                }
+            }
+        }
+
+	localStorage.setItem("treeList", JSON.stringify(treeListNew));
 
     const handleWish = (tree) => {
-		console.log(JSON.parse(localStorage.getItem("fruitList")));		
+		console.log(JSON.parse(localStorage.getItem("treeList")));		
 		console.log(JSON.parse(sessionStorage.getItem("currentlyLogedIn")));
 		var currentProfile = JSON.parse(sessionStorage.getItem("currentlyLogedIn"));
 		var localWishList = currentProfile.wishList;
@@ -45,7 +60,7 @@
 </script>
 
 <div id="itemList">
-    {#each treeList as tree}
+    {#each treeListNew as tree}
         <div class="container">
 			<img  class="itemImage" src={tree.img} alt={tree.name}>
 			<div class="itemDescription">
@@ -53,7 +68,7 @@
 				<br>
 				Price: {tree.price}
 				<br>
-				Quantity: {tree.quantity}
+				Quantity: {tree.quanity}
 				<br>
 			</div>
 			<div class="itemButton">
