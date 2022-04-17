@@ -27,7 +27,8 @@
 
 	var treeListCurrent = JSON.parse(localStorage.getItem("treeList"));
 	var treeListNew = [];
-	for(let treeOld of treeListOld){
+	if(treeListCurrent !== null){
+		for(let treeOld of treeListOld){
             for(let treeNew of treeListCurrent){
                 if(treeNew.id === treeOld.id){
 					if(treeNew.quanity <= treeOld.quanity){
@@ -37,6 +38,11 @@
                 }
             }
         }
+	}else if(treeListCurrent == null){
+		for(let tree of treeListOld){
+			treeListNew.push(tree);
+		}
+	}
 
 	localStorage.setItem("treeList", JSON.stringify(treeListNew));
 

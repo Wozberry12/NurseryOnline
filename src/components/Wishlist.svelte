@@ -2,6 +2,7 @@
     import Checkout from "./Checkout.svelte"
 
     var profile = JSON.parse(sessionStorage.getItem("currentlyLogedIn"));
+
     var itemList = profile.wishList;
     var sum = 0;
     let showCheckout = false;
@@ -23,6 +24,7 @@
 
 
 <div class="userWishList">
+
 
     <div class="purchaseButton">
         <button class="purchaseWishList" on:click={() => handlePurchase()}>Purchase WishList</button>
