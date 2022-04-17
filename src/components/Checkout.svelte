@@ -1,5 +1,4 @@
 <script>
-    //earlier test
     export let showCheckout = false;
     let profile = JSON.parse(sessionStorage.getItem("currentlyLogedIn"));
     let itemList = profile.wishList;
