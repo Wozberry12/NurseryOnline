@@ -1,6 +1,7 @@
 <script>
     // import {item} from './Item.svelte'
 	// export const item = new item();
+	
 	let name;
 	let description;
 	let rating;

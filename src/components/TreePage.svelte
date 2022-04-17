@@ -1,4 +1,5 @@
 <script>
+
     class Item{
 		constructor(id, name, Type, price, quanity, img){
 			this.id = id;
