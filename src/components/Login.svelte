@@ -43,6 +43,7 @@
 </script>
 
 <div id="titleBar">
+    <img src="https://www.kindpng.com/picc/m/210-2105466_bonsai-drawing-transparent-bonsai-tree-png-png-download.png" alt="">
     <h1>Login to your Nursey Online Account Below</h1>
 </div>
 <div id="forUserInput">
