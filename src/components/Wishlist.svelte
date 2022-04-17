@@ -34,19 +34,21 @@
         <button class="purchaseWishList" on:click={() => handlePurchase()}>Purchase WishList</button>
     </div>
     {#each itemList as item}
-    <div class="container">
-        <img  class="itemImage" src={item.img} alt={item.name}>
-        <div class="itemDescription">
-            Name:{item.name}
-            <br>
-            Price: {item.price}
-            <br>
-            Quantity: {item.quanity}
-            <br>
+        <div class="container">
+            <div class="itemImage">
+                <img  class="itemImage" src={item.img} alt={item.name}>
+			</div>
+            <div class="itemDescription">
+                Name:{item.name}
+                <br>
+                Price: {item.price}
+                <br>
+                Quantity: {item.quanity}
+                <br>
+                
+            </div>
             
         </div>
-        
-    </div>
     {/each}
     <div class="totalPrice">
         totalPrice = {sum};

@@ -3,9 +3,6 @@
 	// export const item = new item();
 	import ReviewFruit from "./Review.svelte"
 	
-	let name;
-	let description;
-	let rating;
 	class Item{
 		constructor(id, name, Type, price, quanity, img, reviews){
 			this.id = id;
@@ -26,7 +23,7 @@
 		}
 	}
 	
-	var review = [];
+	var review1 = [];
 	var review2 = [];	
 	var review3=[];
 	var review4=[];
@@ -38,7 +35,7 @@
 	var review10=[];
 
 	var goldenDelicous = new Item(1001, "Golden Delicous Apple", "Apple", 4.50, 25, "https://www.maxdelivery.com/nkz/gifs/60056277.jpg", review2);
-	var grannySmith = new Item(1002, "Granny Smith Apple", "Apple", 3.75, 30, "https://i5.walmartimages.com/asr/bf2ec88a-2f36-41f2-93d3-c3161772733d_1.cdc913433c6acc6bf9201dc1fa86bac9.jpeg", review);
+	var grannySmith = new Item(1002, "Granny Smith Apple", "Apple", 3.75, 30, "https://i5.walmartimages.com/asr/bf2ec88a-2f36-41f2-93d3-c3161772733d_1.cdc913433c6acc6bf9201dc1fa86bac9.jpeg", review1);
 	var cantelope = new Item(1003, "Cantelope", "Cantelope", 6.99, 15, "https://images.heb.com/is/image/HEBGrocery/000325202?fit=constrain,1&wid=800&hei=800&fmt=jpg&qlt=85,0&resMode=sharp2&op_usm=1.75,0.3,2,0", review3);
 	var pineapple = new Item(1004, "Pineapple", "Pineapple", 5.45, 29, "https://m.media-amazon.com/images/I/71+qAJehpkL._SL1500_.jpg", review4);
 	var grape = new Item(1005, "Concord Grape", "Grape", 15.99, 30, "https://cdn.shopify.com/s/files/1/0004/4426/8609/products/Concord-Grapes_v2_400x400.jpg?v=1537881231", review5);
@@ -48,7 +45,7 @@
 	var durian = new Item(1009, "Durian", "Durian", 33.99, 14, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-2_6SRJK2viP847Hy6Vcq2SUj7UkuHVZ_6k94SEB26nj01zSKrepPpqc-ylMzYXbkX7o&usqp=CAU", review9);
 	var dragonfruit = new Item(1010, "DragonFruit", "DragonFruit", 49.99, 17, "https://cdn.shopify.com/s/files/1/0336/7167/5948/products/3-count-image-of-dragon-fruit-white-fruit-29921760706604_600x600.jpg?v=1648081574", review10);
 	
-	var newReview = new Review(4, "Great Taste", "#", "Ben");
+	var newReview1 = new Review(4, "Great Taste", "#", "Ben");
 	var newReview2 = new Review(3, "Average Taste", "#", "Will");
 	var newReview3 = new Review(2, "Could've been better", "#", "Marco");
 	var newReview4 = new Review(1, "Would Not Buy Again", "#", "Ben");
@@ -59,7 +56,7 @@
 	var newReview9 = new Review(1, "Rotting", "#", "Will");
 	var newReview10 = new Review(5, "Would buy 50 more!", "#", "Marco");
 	
-	goldenDelicous.reviews.push(newReview);
+	goldenDelicous.reviews.push(newReview1);
 	grannySmith.reviews.push(newReview2);
 	cantelope.reviews.push(newReview3);
 	pineapple.reviews.push(newReview4);
@@ -70,11 +67,14 @@
 	durian.reviews.push(newReview9);
 	dragonfruit.reviews.push(newReview10);
 
-
+	//base data for all fruits
 	var baseFruitList = [goldenDelicous, grannySmith, cantelope, pineapple, grape, orange, watermelon, rambutan, durian, dragonfruit];
 
+	//current fruit lists that are in localstorage
 	var currentFruitList = JSON.parse(localStorage.getItem("fruitList"));
 	var newFruitList = [];
+
+	//updates fruit quantity data after purchase in checkout
 	if(currentFruitList != null){
 		for(let fruitOld of baseFruitList){
             for(let fruitNew of currentFruitList){
@@ -96,27 +96,11 @@
 
 
     const handleWish = (fruit) => {
-		// console.log(JSON.parse(localStorage.getItem("fruitList")));		
-		// console.log(JSON.parse(sessionStorage.getItem("currentlyLogedIn")));
 		var currentProfile = JSON.parse(sessionStorage.getItem("currentlyLogedIn"));
 		var localWishList = currentProfile.wishList;
 
-		// for(let item of localWishList){
-		// 	if(item.id === fruit.id){
-		// 		fruit.quanityWish += 1;
-		// 		console.log(fruit.quanityWish);
-		// 		console.log(localWishList);
-		// 		item.quanityWish = fruit.quanityWish;
-		// 		localWishList = localWishList;
-		// 		localWishList.push(fruit);
-		// 		return;
-		// 	}
-		// }
 		localWishList.push(fruit);
-		// console.log(localWishList);
-		// console.log(currentProfile.username);
 		currentProfile.wishList = localWishList;
-		// console.log(currentProfile.wishList);
 		window.alert(fruit.name + " added to wishlist");
 		sessionStorage.setItem("currentlyLogedIn", JSON.stringify(currentProfile));
 	}
@@ -132,16 +116,21 @@
 	}
 	
 	const handleAddReview = (fruit) =>{
-		var localList = JSON.parse(localStorage.getItem("fruitList"));
-		for(var i = 0; i < localList.length; i++){
-			if(localList[i].id == fruit.id){
-				var addedReview = new Review(rating, description,"#", name);
-				fruit.reviews.push(addedReview);
-				localList[i] = fruit;
+		let localFruitList = JSON.parse(localStorage.getItem("fruitList"));
+		let addRating = document.getElementById("ratingInput").value;
+		let addeDescription = document.getElementById("descriptionInput").value;
+
+		let currentProfile = JSON.parse(sessionStorage.getItem("currentlyLogedIn"));
+			let currentProfileUsername = currentProfile.username;
+			for (let item in localFruitList) {
+				if(item.id === fruit.id){
+					var addedReview = new Review(addRating, addeDescription,"#", currentProfileUsername);
+					console.log(addedReview);
+					item.reviews.push(addedReview);
+					console.log(item);
+				}
 			}
-		}
-		fruitList = localList;
-		localStorage.setItem("fruitList", JSON.stringify(localList));
+		localStorage.setItem("fruitList", JSON.stringify(localFruitList));
 		
 	}
 </script>
@@ -163,20 +152,17 @@
 			<div class="itemButton">
 				<button class="addWishlist" on:click={() => handleWish(fruit)}>Add to WishList</button>
 				<br>
-				<button id="viewReview" on:click={() => handleReview()}>View Reviews</button>
-				<button class="addReview" on:click={() => handleAddReview(fruit)}>Add Review</button>
+				<button id="viewReview" on:click={() => handleReview(fruit)}>View Reviews</button>
 			</div>
 			{#if {showReview}}
 				<ReviewFruit viewReview={showReview} reviewOfItems={fruit.reviews}/>
 			{/if}
 			<div id="addReview">	
 				<form id="addReviewForm">
-					<label for="name">Name:</label>
-					<input type="text" id="name" name="name" bind:value={name}>
 					<label for="rating">Rating:</label>
-					<input type="text" id="rating" name="rating" bind:value={rating}>
+					<input type="text" id="ratingInput" name="rating">
 					<label for="description">Description:</label>
-					<input type="text" id="description" name="description" bind:value={description}>
+					<input type="text" id="descriptionInput" name="description">
 					<button class="addReview" on:click={() => handleAddReview(fruit)}>Add Review</button>
 				</form>
 			</div>

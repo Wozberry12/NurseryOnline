@@ -60,13 +60,15 @@ input, button, select, textarea {
 .itemDescription{
 	float:left;
 	width: 45%;
+	height: 394px;
 	font-size: 25px;
 	margin-top: 6%;
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .itemButton{
-	float: left;
+	float: right;
 	width: 22%;
+	height: 5%;
 }
 input:disabled {
 	color: #ccc;
@@ -98,10 +100,6 @@ button:focus {
 	width: 100%;
 	text-align: center;
 } */
-.itemButton{
-	float:right;
-	margin: 10px;
-}
 .purchaseButton{
 	float: right;
 }
