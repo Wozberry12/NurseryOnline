@@ -15,10 +15,9 @@
 		}
 	}
 	class Review{
-		constructor(rating, description, starImg, nameOfReviewer){
+		constructor(rating, description,nameOfReviewer){
 			this.rating = rating;
 			this.description = description;
-			this.starImg = starImg;
 			this.nameOfReviewer = nameOfReviewer;
 		}
 	}
@@ -45,16 +44,16 @@
 	var durian = new Item(1009, "Durian", "Durian", 33.99, 14, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-2_6SRJK2viP847Hy6Vcq2SUj7UkuHVZ_6k94SEB26nj01zSKrepPpqc-ylMzYXbkX7o&usqp=CAU", review9);
 	var dragonfruit = new Item(1010, "DragonFruit", "DragonFruit", 49.99, 17, "https://cdn.shopify.com/s/files/1/0336/7167/5948/products/3-count-image-of-dragon-fruit-white-fruit-29921760706604_600x600.jpg?v=1648081574", review10);
 	
-	var newReview1 = new Review(4, "Great Taste", "#", "Ben");
-	var newReview2 = new Review(3, "Average Taste", "#", "Will");
-	var newReview3 = new Review(2, "Could've been better", "#", "Marco");
-	var newReview4 = new Review(1, "Would Not Buy Again", "#", "Ben");
-	var newReview5 = new Review(5, "Amazing Product!", "#", "Will");
-	var newReview6 = new Review(4, "Pretty great quality", "#", "Ben");
-	var newReview7 = new Review(3, "Average quality", "#", "Marco");
-	var newReview8 = new Review(2, "Bad Taste", "#", "Ben");
-	var newReview9 = new Review(1, "Rotting", "#", "Will");
-	var newReview10 = new Review(5, "Would buy 50 more!", "#", "Marco");
+	var newReview1 = new Review(4, "Great Taste", "Ben");
+	var newReview2 = new Review(3, "Average Taste", "Will");
+	var newReview3 = new Review(2, "Could've been better", "Marco");
+	var newReview4 = new Review(1, "Would Not Buy Again",  "Ben");
+	var newReview5 = new Review(5, "Amazing Product!",  "Will");
+	var newReview6 = new Review(4, "Pretty great quality",  "Ben");
+	var newReview7 = new Review(3, "Average quality", "Marco");
+	var newReview8 = new Review(2, "Bad Taste",  "Ben");
+	var newReview9 = new Review(1, "Rotting", "Will");
+	var newReview10 = new Review(5, "Would buy 50 more!", "Marco");
 	
 	goldenDelicous.reviews.push(newReview1);
 	grannySmith.reviews.push(newReview2);
