@@ -68,26 +68,26 @@
 	var treeListOld = [bonsai, dragon, palm, candelabra, olive, citrus, fig, money, corn, umbrella];
     localStorage.setItem("treeList", JSON.stringify(treeList));
 
-	var treeListCurrent = JSON.parse(localStorage.getItem("treeList"));
-	var treeListNew = [];
-	if(treeListCurrent !== null){
-		for(let treeOld of treeListOld){
-            for(let treeNew of treeListCurrent){
-                if(treeNew.id === treeOld.id){
-					if(treeNew.quanity <= treeOld.quanity){
-						treeListNew.push(treeNew);
-					}
-					else(treeListNew.push(treeOld))
-                }
-            }
-        }
-	}else if(treeListCurrent == null){
-		for(let tree of treeListOld){
-			treeListNew.push(tree);
-		}
-	}
+	// var treeListCurrent = JSON.parse(localStorage.getItem("treeList"));
+	// var treeListNew = [];
+	// if(treeListCurrent !== null){
+	// 	for(let treeOld of treeListOld){
+    //         for(let treeNew of treeListCurrent){
+    //             if(treeNew.id === treeOld.id){
+	// 				if(treeNew.quanity <= treeOld.quanity){
+	// 					treeListNew.push(treeNew);
+	// 				}
+	// 				else(treeListNew.push(treeOld))
+    //             }
+    //         }
+    //     }
+	// }else if(treeListCurrent == null){
+	// 	for(let tree of treeListOld){
+	// 		treeListNew.push(tree);
+	// 	}
+	// }
 
-	localStorage.setItem("treeList", JSON.stringify(treeListNew));
+	// localStorage.setItem("treeList", JSON.stringify(treeListNew));
 
     const handleWish = (tree) => {
 		console.log(JSON.parse(localStorage.getItem("treeList")));		
