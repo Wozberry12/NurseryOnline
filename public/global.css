@@ -48,13 +48,25 @@ input, button, select, textarea {
 	margin: 10px;
 	float: left;
 	height: 15%;
-	width: 15%;
+	width: 33%;
+}
+.itemImage > img{
+	margin: 10px;
+	float: left;
+	height: 100%;
+	width: 100%;
 	border: groove;
 }
 .itemDescription{
-	width: 85%;
+	float:left;
+	width: 45%;
 	font-size: 25px;
-
+	margin-top: 6%;
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.itemButton{
+	float: left;
+	width: 22%;
 }
 input:disabled {
 	color: #ccc;

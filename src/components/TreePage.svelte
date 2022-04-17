@@ -69,7 +69,9 @@
 <div id="itemList">
     {#each treeListNew as tree}
         <div class="container">
-			<img  class="itemImage" src={tree.img} alt={tree.name}>
+			<div class="itemImage">
+				<img src={tree.img} alt={tree.name}>
+			</div>
 			<div class="itemDescription">
 				Name: {tree.name}
 				<br>

@@ -1,6 +1,7 @@
 <script>
     // import {item} from './Item.svelte'
 	// export const item = new item();
+	import ReviewFruit from "./Review.svelte"
 	
 	let name;
 	let description;
@@ -120,13 +121,14 @@
 		sessionStorage.setItem("currentlyLogedIn", JSON.stringify(currentProfile));
 	}
 
-	const reviewDiv = document.getElementById("reviewInfo");
-	const handleReview = (fruit) => {
-		if(reviewDiv.style.display !== "none"){
-			reviewDiv.style.display = "none"
-		} else {
-			reviewDiv.style.display = "block"
-		}
+	let showReview = false;
+	const handleReview = () => {
+        if(showReview == true){
+            showReview = false;
+        }
+        else if(showReview == false){
+            showReview = true
+        }
 	}
 	
 	const handleAddReview = (fruit) =>{
@@ -147,7 +149,9 @@
 <div id="itemList">
     {#each newFruitList as fruit}
         <div class="container">
-			<img  class="itemImage" src={fruit.img} alt={fruit.name}>
+			<div class="itemImage">
+				<img src={fruit.img} alt={fruit.name}>
+			</div>
 			<div class="itemDescription">
 				Name: {fruit.name}
 				<br>
@@ -156,13 +160,15 @@
 				Quantity: {fruit.quanity}
 				<br>
 			</div>
-			<div id="reviewInfo">
-				{#each fruit.reviews as reviews} 
-					{reviews.nameOfReviewer}
-					{reviews.rating}
-					{reviews.description}
-				{/each}
+			<div class="itemButton">
+				<button class="addWishlist" on:click={() => handleWish(fruit)}>Add to WishList</button>
+				<br>
+				<button id="viewReview" on:click={() => handleReview()}>View Reviews</button>
+				<button class="addReview" on:click={() => handleAddReview(fruit)}>Add Review</button>
 			</div>
+			{#if {showReview}}
+				<ReviewFruit viewReview={showReview} reviewOfItems={fruit.reviews}/>
+			{/if}
 			<div id="addReview">	
 				<form id="addReviewForm">
 					<label for="name">Name:</label>
@@ -174,12 +180,7 @@
 					<button class="addReview" on:click={() => handleAddReview(fruit)}>Add Review</button>
 				</form>
 			</div>
-			<div class="itemButton">
-				<button class="addWishlist" on:click={() => handleWish(fruit)}>Add to WishList</button>
-				<br>
-				<button id="viewReview" on:click={() => handleReview(fruit)}>View Reviews</button>
-				<button class="addReview" on:click={() => handleAddReview(fruit)}>Add Review</button>
-			</div>
+			
 		</div>
     {/each}
 </div>
