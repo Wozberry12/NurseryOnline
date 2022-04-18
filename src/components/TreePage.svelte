@@ -43,10 +43,10 @@
 	var umbrella = new Item(2010, "Umbrella Plant", "", 49.99, 17, "https://cdn.shoplightspeed.com/shops/611765/files/29754218/schefflera-arboricola-35.jpg", review10);
 
 	var newReview0 = new Review(9, "I love chopping this everything", "Marco")
-	var newReview1 = new Review(9, "Great Taste", "Ben");
-	var newReview2 = new Review(6, "Average Taste", "Will");
-	var newReview3 = new Review(4, "Could've been better", "Marco");
-	var newReview4 = new Review(1, "Would Not Buy Again", "Ben");
+	var newReview1 = new Review(9, "My mom owns this tree in her house. Everytime I see this plant, it reminds me of her", "Ben");
+	var newReview2 = new Review(6, "Does not look like a dragon at all but it has a cool name and a cool design and shape", "Will");
+	var newReview3 = new Review(4, "Palm Sunday is around the corner and you guys have gifted us the opportunity to sponsor us in providing these palm trees.", "Will");
+	var newReview4 = new Review(1, "I have used this in a fight before. That man is alseep forever", "Marco");
 	var newReview5 = new Review(9, "Amazing Product!", "Will");
 	var newReview6 = new Review(10, "Pretty great quality", "Ben");
 	var newReview7 = new Review(5, "Average quality", "Marco");
@@ -54,6 +54,7 @@
 	var newReview9 = new Review(1, "Rotting", "Will");
 	var newReview10 = new Review(10, "Would buy 50 more!", "Marco");
 	
+	bonsai.reviews.push(newReview0);
 	bonsai.reviews.push(newReview1);
 	dragon.reviews.push(newReview2);
 	palm.reviews.push(newReview3);

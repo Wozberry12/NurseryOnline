@@ -85,17 +85,11 @@
                 }
             }
         }
-		if(currentFruitList.length > baseFruitList.length){
-			for(let i = baseFruitList.length; i < currentFruitList.length; i++){
-				newFruitList.push(currentFruitList[i]);
-			}
-		}
 	}else if(currentFruitList == null){
 		for(let fruit of baseFruitList){
 			newFruitList.push(fruit);
 		}
 	}
-
 	
 	localStorage.setItem("fruitList", JSON.stringify(newFruitList));
 
@@ -122,14 +116,14 @@
 	
 	const handleAddReview = (fruit) =>{
 		let localFruitList = JSON.parse(localStorage.getItem("fruitList"));
-		let addRating = document.getElementById("ratingInput").value;
-		let addeDescription = document.getElementById("descriptionInput").value;
+		let addRating = document.getElementById("ratingInputFruit").value;
+		let addeDescription = document.getElementById("descriptionInputFruit").value;
 
 		let currentProfile = JSON.parse(sessionStorage.getItem("currentlyLogedIn"));
 			let currentProfileUsername = currentProfile.username;
 			for (var item = 0; item < localFruitList.length; item++) {
 				if(localFruitList[item].id == fruit.id){
-					var addedReview = new Review(addRating, addeDescription, currentProfileUsername);
+					var addedReview = new Review(addRating, addeDescription,"#", currentProfileUsername);
 					console.log(addedReview);
 					localFruitList[item].reviews.push(addedReview);
 					console.log(item);
@@ -167,9 +161,9 @@
 					<label for="title">Enter Your Review of This Item:</label>
 
 					<label for="rating">Rating:</label>
-					<input type="text" id="ratingInput" name="rating">
+					<input type="text" id="ratingInputFruit" name="rating">
 					<label for="description">Description:</label>
-					<input type="text" id="descriptionInput" name="description">
+					<input type="text" id="descriptionInputFruit" name="description">
 					<br>
 					<button class="addReview" on:click={() => handleAddReview(fruit)}>Add Review</button>
 				
