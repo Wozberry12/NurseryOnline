@@ -64,9 +64,10 @@
     }
     
 </script>
-
-<div id="titleBar">
+<div class="titleImage">
     <img src="https://www.kindpng.com/picc/m/210-2105466_bonsai-drawing-transparent-bonsai-tree-png-png-download.png" alt="">
+</div>
+<div id="titleBar">
     <h1>Login to your Nursey Online Account Below</h1>
 </div>
 <div id="forUserInput">
@@ -83,3 +84,14 @@
         <button class="addWishlist" on:click={() => handleLogin(usernameLogin, passwordLogin)}>Login</button>
     </div>
 </div>
+<style>
+    .titleImage{
+        float: right;
+        width: 30%;
+        height: 30%;
+    }
+    .titleImage > img{
+        width: 100%;
+        height: 100%;
+    }
+</style>
