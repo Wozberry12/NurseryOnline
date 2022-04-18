@@ -59,7 +59,21 @@
         let newProfile = new profile(usernameLogin, passwordLogin, profileWishList);
         storageAccounts.push(newProfile);
         localStorage.setItem("Accounts", JSON.stringify(storageAccounts));
-
+        document.getElementById("username").value = "";
+        document.getElementById("password").value = "";
+        window.alert("Account was created with Username: " + newProfile.username + " Password: " + newProfile.password);
+    }
+    const handleDeleteAccount = (usernameLogin, passwordLogin) => {
+        let storageAccounts = JSON.parse(localStorage.getItem("Accounts"));
+        for(let i = 0; i < storageAccounts.length; i++){
+            if(storageAccounts[i].username == usernameLogin && storageAccounts[i].password == passwordLogin){
+                storageAccounts.splice(i, 1);
+            }
+        }
+        document.getElementById("username").value = "";
+        document.getElementById("password").value = "";
+        localStorage.setItem("Accounts", JSON.stringify(storageAccounts));
+        window.alert("Account was delete with Username: " + usernameLogin + " Password: " + passwordLogin);
     }
     
 </script>
@@ -81,6 +95,7 @@
     <div class="loginButton">
         <button class="addWishList" on:click={() => handleCreateAccount(usernameLogin, passwordLogin)}>Create Account</button> 
         <button class="addWishlist" on:click={() => handleLogin(usernameLogin, passwordLogin)}>Login</button>
+        <button class="addWishlist" on:click={() => handleDeleteAccount(usernameLogin, passwordLogin)}>Delete Account</button>
     </div>
 </div>
 <style>
