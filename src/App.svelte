@@ -2,17 +2,16 @@
 	import NavigationBar from './components/NavigationBar.svelte'
 	
 </script>
+<div id="pageContent">
+	<main>
+		<div id="navDiv"><NavigationBar /></div>
+	</main>
+	<footer id="footer">
+		<p>Authors: 
+			Benjamin Kamish, Marco Kosasih, William Oswald</p>
+	</footer>
+</div>
 
-<main>
-	
-	<div id="navDiv"><NavigationBar /></div>
-
-
-</main>
-<footer>
-	<p>Authors: 
-		Benjamin Kamish, Marco Kosasih, William Oswald</p>
-  </footer>
 
 <style>
 	
@@ -22,6 +21,7 @@
 		margin: 0 auto;
 		text-align: center;
 		padding:0;
+		padding-bottom: 2.5rem;  
 	}
 	
 	#navDiv{
