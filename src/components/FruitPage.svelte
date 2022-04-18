@@ -163,10 +163,6 @@
 				<ReviewFruit viewReview={showReview} reviewOfItems={fruit.reviews}/>
 			{/if}
 			<div id="addReview">	
-
-				
-
-				
 					<br>
 					<label for="title">Enter Your Review of This Item:</label>
 
