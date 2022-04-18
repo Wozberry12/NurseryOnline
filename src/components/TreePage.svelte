@@ -84,6 +84,11 @@
                 }
             }
         }
+		if(treeListCurrent.length > treeListOld.length){
+			for(let i = treeListOld.length; i < treeListCurrent.length; i++){
+				treeListNew.push(treeListCurrent[i]);
+			}
+		}
 	}else if(treeListCurrent == null){
 		for(let tree of treeListOld){
 			treeListNew.push(tree);
