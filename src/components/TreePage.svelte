@@ -46,7 +46,7 @@
 	var newReview1 = new Review(9, "My mom owns this tree in her house. Everytime I see this plant, it reminds me of her", "Ben");
 	var newReview2 = new Review(6, "Does not look like a dragon at all but it has a cool name and a cool design and shape", "Will");
 	var newReview3 = new Review(4, "Palm Sunday is around the corner and you guys have gifted us the opportunity to sponsor us in providing these palm trees.", "Will");
-	var newReview4 = new Review(1, "I have used this in a fight before. That man is alseep forever", "Marco");
+	var newReview4 = new Review(1, "I have used this in a fight before. That man is asleep forever", "Marco");
 	var newReview5 = new Review(9, "Amazing Product!", "Will");
 	var newReview6 = new Review(10, "Couldn't believe the taste when I went to bite into it. Absolutely Delicious. Will buy more.", "Ben");
 	var newReview7 = new Review(5, "I have bought from this producer before and I have never been more dissapointed by the quality" +
