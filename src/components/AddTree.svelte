@@ -32,7 +32,7 @@
 
 <div id="addTreeDiv">
     
-        <label for="name">Fruit Name:</label>
+        <label for="name">Tree Name:</label>
         <input type="text" id="nameInput" name="name">
         <label for="type">Type:</label>
         <input type="text" id="typeInput" name="type">
