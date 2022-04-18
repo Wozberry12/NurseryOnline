@@ -38,6 +38,7 @@
     profile.wishList = itemList;
     console.log(profile);
     sessionStorage.setItem("currentlyLogedIn", JSON.stringify(profile));
+    window.alert("You Have Purchased the WishList");
     }
 </script>
 
