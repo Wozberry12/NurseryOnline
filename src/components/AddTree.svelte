@@ -25,6 +25,7 @@
         var addTree = new Item(id,name, type, price, quanity, img, reviewArray);
         currentTree.push(addTree);
         localStorage.setItem("treeList", JSON.stringify(currentTree));
+        window.alert("Added Tree " + name);
     }
     
     

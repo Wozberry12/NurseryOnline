@@ -25,6 +25,7 @@
         var addFruit = new Item(id,name, type, price, quanity, img, reviewArray);
         currentFruit.push(addFruit);
         localStorage.setItem("fruitList", JSON.stringify(currentFruit));
+        window.alert("Added Fruit " + name);
     }
     
     
