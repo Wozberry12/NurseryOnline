@@ -43,6 +43,7 @@ input, button, select, textarea {
 }
 .container{
 	clear:both;
+	border-style: solid;
 }
 .itemImage{
 	margin: 10px;
