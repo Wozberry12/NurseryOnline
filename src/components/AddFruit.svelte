@@ -42,6 +42,13 @@
         <input type="text" id="amountInput" name="amount">
         <label for="img">Image URL:</label>
         <input type="text" id="imgInput" name="img">
+        <br>
         <button class="addReview" on:click={() => handleAddFruit()}>Add Review</button>
     
 </div>
+<style>
+    #addFruitDiv{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 20px;
+    }
+</style>
