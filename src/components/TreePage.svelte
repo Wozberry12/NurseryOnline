@@ -121,14 +121,14 @@
 		let currentProfile = JSON.parse(sessionStorage.getItem("currentlyLogedIn"));
 			let currentProfileUsername = currentProfile.username;
 			for (var item = 0; item < localFruitList.length; item++) {
-				if(localFruitList[item].id == fruit.id){
+				if(localFruitList[item].id == tree.id){
 					var addedReview = new Review(addRating, addeDescription,"#", currentProfileUsername);
 					console.log(addedReview);
 					localFruitList[item].reviews.push(addedReview);
 					console.log(item);
 				}
 			}
-		localStorage.setItem("fruitList", JSON.stringify(localFruitList));
+		localStorage.setItem("treeList", JSON.stringify(localFruitList));
 		
 	}
 </script>
@@ -160,12 +160,13 @@
 				<form id="addReviewForm">
 					<br>
 					<label for="title">Enter Your Review of This Item:</label>
+				
 					<label for="rating">Rating:</label>
 					<input type="text" id="ratingInput" name="rating">
 					<label for="description">Description:</label>
 					<input type="text" id="descriptionInput" name="description">
 					<button class="addReview" on:click={() => handleAddReview(tree)}>Add Review</button>
-				</form>
+				
 			</div>
 		</div>
     {/each}
