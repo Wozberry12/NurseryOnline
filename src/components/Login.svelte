@@ -26,7 +26,6 @@
     var currentAccounts = JSON.parse(localStorage.getItem("Accounts"));
     var newAccountList = [];
     if(currentAccounts != null){
-        
         for(let j = 0; j < currentAccounts.length; j++){
             newAccountList.push(currentAccounts[j]);
         }
