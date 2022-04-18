@@ -158,7 +158,7 @@
 				<ReviewTree viewReview={showReview} reviewOfItems={tree.reviews}/>
 			{/if}
 			<div id="addReview">	
-				<form id="addReviewForm">
+				
 					<br>
 					<label for="title">Enter Your Review of This Item:</label>
 				
