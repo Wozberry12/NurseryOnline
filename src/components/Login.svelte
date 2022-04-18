@@ -26,7 +26,6 @@
     var currentAccounts = JSON.parse(localStorage.getItem("Accounts"));
     var newAccountList = [];
     if(currentAccounts != null){
-        
         for(let j = 0; j < currentAccounts.length; j++){
             newAccountList.push(currentAccounts[j]);
         }
@@ -48,7 +47,7 @@
             }
         }
         if(loggedIn === true){
-            window.alert("You are Logged in");
+            window.alert("You are Logged in " + usernameLogin);
         }
         else if(loggedIn == false){
             window.alert("Account " + usernameLogin + " is not found");
