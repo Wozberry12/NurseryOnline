@@ -157,13 +157,13 @@
 				<ReviewFruit viewReview={showReview} reviewOfItems={fruit.reviews}/>
 			{/if}
 			<div id="addReview">	
-				<form id="addReviewForm">
+				
 					<label for="rating">Rating:</label>
 					<input type="text" id="ratingInput" name="rating">
 					<label for="description">Description:</label>
 					<input type="text" id="descriptionInput" name="description">
 					<button class="addReview" on:click={() => handleAddReview(fruit)}>Add Review</button>
-				</form>
+				
 			</div>
 			
 		</div>

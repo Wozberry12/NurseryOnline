@@ -66,10 +66,11 @@
 	umbrella.reviews.push(newReview10);
 
 	var treeListOld = [bonsai, dragon, palm, candelabra, olive, citrus, fig, money, corn, umbrella];
-    localStorage.setItem("treeList", JSON.stringify(treeListOld));
+	
 
 	var treeListCurrent = JSON.parse(localStorage.getItem("treeList"));
 	var treeListNew = [];
+	
 	if(treeListCurrent !== null){
 		for(let treeOld of treeListOld){
             for(let treeNew of treeListCurrent){
@@ -134,7 +135,7 @@
 </script>
 
 <div id="itemList">
-    {#each treeListOld as tree}
+    {#each treeListNew as tree}
         <div class="container">
 			<div class="itemImage">
 				<img src={tree.img} alt={tree.name}>
