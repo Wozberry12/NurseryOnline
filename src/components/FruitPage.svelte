@@ -128,7 +128,7 @@
 			let currentProfileUsername = currentProfile.username;
 			for (var item = 0; item < localFruitList.length; item++) {
 				if(localFruitList[item].id == fruit.id){
-					var addedReview = new Review(addRating, addeDescription,currentProfileUsername, currentProfileUsername);
+					var addedReview = new Review(addRating, addeDescription, currentProfileUsername);
 					console.log(addedReview);
 					localFruitList[item].reviews.push(addedReview);
 					console.log(item);
