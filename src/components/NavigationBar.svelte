@@ -3,8 +3,9 @@
     import Wishlist from "./Wishlist.svelte";
     import About from "./About.svelte";
     import FruitList from "./FruitPage.svelte";
-    import TreeList from "./TreePage.svelte"
+    import TreeList from "./TreePage.svelte";
     import Checkout from "./Checkout.svelte"
+    import AddFruit from "./AddFruit.svelte";
     export let menu = 1;
 
 </script>
@@ -17,6 +18,7 @@
             <li><a href="/" on:click|preventDefault={() => (menu = 3)}>Fruit For Sale</a></li>
             <li><a href="/" on:click|preventDefault={() => (menu = 4)}>Tree For Sale</a></li>
             <li><a href="/" on:click|preventDefault={() => (menu = 5)}>About</a></li>
+            <li><a href="/" on:click|preventDefault={() => (menu = 6)}>Add Fruit</a></li>
 
         </ul>
     </div>
@@ -32,6 +34,8 @@
     <TreeList />
 {:else if menu === 5}
     <About />
+{:else if menu === 6}
+    <AddFruit />
 {:else}
     <h1>Page not Found</h1>
 {/if}
