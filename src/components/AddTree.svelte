@@ -30,8 +30,9 @@
     
 </script>
 
+<h1>Add New Tree</h1>
+<br>
 <div id="addTreeDiv">
-    
         <label for="name">Tree Name:</label>
         <input type="text" id="nameInput" name="name">
         <label for="type">Type:</label>
@@ -48,6 +49,9 @@
 </div>
 <style>
     #addTreeDiv{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        text-align: right;
         font-family: Georgia, 'Times New Roman', Times, serif;
         font-size: 20px;
     }

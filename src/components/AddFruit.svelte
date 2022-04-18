@@ -30,8 +30,10 @@
     
 </script>
 
+<h1>Add New Fruits</h1>
+<br>
+
 <div id="addFruitDiv">
-    
         <label for="name">Fruit Name:</label>
         <input type="text" id="nameInput" name="name">
         <label for="type">Type:</label>
@@ -46,9 +48,14 @@
         <button class="addReview" on:click={() => handleAddFruit()}>Add Fruit</button>
     
 </div>
-<style>
+<style>    
     #addFruitDiv{
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        text-align: right;
         font-family: Georgia, 'Times New Roman', Times, serif;
         font-size: 20px;
     }
+
 </style>
