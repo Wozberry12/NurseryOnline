@@ -22,13 +22,24 @@
     var account4 = new profile("pascucci", "giveusagoodscoreplz", wishList4);
     var localAccounts = [];
     //var loggedInProfile = [];
-    localAccounts = [account1, account2, account3, account4];
-    localStorage.setItem("Accounts", JSON.stringify(localAccounts));
-
+   var oldlocalAccounts = [account1, account2, account3, account4];
+    var currentAccounts = JSON.parse(localStorage.getItem("Accounts"));
+    var newAccountList = [];
+    if(currentAccounts != null){
+        
+        for(let j = 0; j < currentAccounts.length; j++){
+            newAccountList.push(currentAccounts[j]);
+        }
+    }
+    else{
+        newAccountList = oldlocalAccounts;
+    }
+    localStorage.setItem("Accounts", JSON.stringify(newAccountList));
+    
     const handleLogin = (usernameLogin, passwordLogin) => {
         var loggedIn = false;
 		var accountsList = JSON.parse(localStorage.getItem("Accounts"));
-        for(var i = 0; i < accountsList.length; i++){
+        for(let i = 0; i < accountsList.length; i++){
             if(accountsList[i].username == usernameLogin && accountsList[i].password == passwordLogin){
                 
                 sessionStorage.setItem("currentlyLogedIn", JSON.stringify(accountsList[i]));
@@ -43,6 +54,14 @@
             window.alert("Account " + usernameLogin + " is not found");
         }
 	}
+    const handleCreateAccount = (usernameLogin, passwordLogin) => {
+        let storageAccounts = JSON.parse(localStorage.getItem("Accounts"));
+        let profileWishList = [];
+        let newProfile = new profile(usernameLogin, passwordLogin, profileWishList);
+        storageAccounts.push(newProfile);
+        localStorage.setItem("Accounts", JSON.stringify(storageAccounts));
+
+    }
     
 </script>
 
@@ -60,6 +79,7 @@
     </form>
 
     <div class="loginButton">
+        <button class="addWishList" on:click={() => handleCreateAccount(usernameLogin, passwordLogin)}>Create Account</button> 
         <button class="addWishlist" on:click={() => handleLogin(usernameLogin, passwordLogin)}>Login</button>
     </div>
 </div>

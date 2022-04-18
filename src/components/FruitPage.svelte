@@ -144,11 +144,11 @@
 				fruitInStorage.splice(item, 1);
 			}
 		}
-		let itemDiv = document.getElementsByID("itemImage");
-		itemDiv.innerHTML = "";
+		// let itemDiv = document.getElementsById("itemImage");
+		// itemDiv.innerHTML = "";
 
-		let descriptionDiv = document.getElementById("itemDescription");
-		descriptionDiv.innerHTML = "";
+		// let descriptionDiv = document.getElementById("itemDescription");
+		// descriptionDiv.innerHTML = "";	
 
 		localStorage.setItem("fruitList", JSON.stringify(fruitInStorage));
 		
