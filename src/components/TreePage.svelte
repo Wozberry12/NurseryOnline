@@ -138,6 +138,7 @@
 
 <div id="itemList">
     {#each treeListNew as tree}
+	{#if tree.quanity> 0}
         <div class="container">
 			<div class="itemImage">
 				<img src={tree.img} alt={tree.name}>
@@ -172,5 +173,6 @@
 				
 			</div>
 		</div>
+		{/if}
     {/each}
 </div>

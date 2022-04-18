@@ -141,7 +141,8 @@
 
 <div id="itemList">
     {#each newFruitList as fruit}
-        <div class="container">
+	{#if fruit.quanity> 0}
+	<div class="container">
 			<div class="itemImage">
 				<img src={fruit.img} alt={fruit.name}>
 			</div>
@@ -175,5 +176,6 @@
 			</div>
 			
 		</div>
+		{/if}
     {/each}
 </div>

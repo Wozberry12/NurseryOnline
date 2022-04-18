@@ -43,7 +43,7 @@
         <label for="img">Image URL:</label>
         <input type="text" id="imgInput" name="img">
         <br>
-        <button class="addReview" on:click={() => handleAddFruit()}>Add Review</button>
+        <button class="addReview" on:click={() => handleAddFruit()}>Add Fruit</button>
     
 </div>
 <style>
