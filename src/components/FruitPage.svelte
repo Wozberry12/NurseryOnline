@@ -85,6 +85,11 @@
                 }
             }
         }
+		if(currentFruitList.length > baseFruitList.length){
+			for(let i = baseFruitList.length; i < currentFruitList.length; i++){
+				newFruitList.push(currentFruitList[i]);
+			}
+		}
 	}else if(currentFruitList == null){
 		for(let fruit of baseFruitList){
 			newFruitList.push(fruit);
