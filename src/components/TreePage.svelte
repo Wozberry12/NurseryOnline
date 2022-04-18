@@ -48,11 +48,12 @@
 	var newReview3 = new Review(4, "Palm Sunday is around the corner and you guys have gifted us the opportunity to sponsor us in providing these palm trees.", "Will");
 	var newReview4 = new Review(1, "I have used this in a fight before. That man is alseep forever", "Marco");
 	var newReview5 = new Review(9, "Amazing Product!", "Will");
-	var newReview6 = new Review(10, "Pretty great quality", "Ben");
-	var newReview7 = new Review(5, "Average quality", "Marco");
-	var newReview8 = new Review(2, "Bad Taste", "Ben");
-	var newReview9 = new Review(1, "Rotting", "Will");
-	var newReview10 = new Review(10, "Would buy 50 more!", "Marco");
+	var newReview6 = new Review(10, "Couldn't believe the taste when I went to bite into it. Absolutely Delicious. Will buy more.", "Ben");
+	var newReview7 = new Review(5, "I have bought from this producer before and I have never been more dissapointed by the quality" +
+									"of this tree. Will never buy this tree again from the producer! Sad!", "Marco");
+	var newReview8 = new Review(2, "Lordy Lou, my auntie used to bring me fruit like this when I was a child. The way it smelled brought me right back to childhood. Good luck to anyone NOT buying this", "Ben");
+	var newReview9 = new Review(1, "Corn time is my family's least favorite part of the day, but thanks to this cob I have finally learned to love my son again. Can't wait to get some butter on this ear.", "Will");
+	var newReview10 = new Review(10, "This plant is so mysterious. When it arrived in perfect condition, I knew that my desires had been met by the shape of the plant.", "Marco");
 	
 	bonsai.reviews.push(newReview0);
 	bonsai.reviews.push(newReview1);
