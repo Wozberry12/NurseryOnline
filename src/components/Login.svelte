@@ -47,7 +47,7 @@
             }
         }
         if(loggedIn === true){
-            window.alert("You are Logged in " + usernameLogin);
+            window.alert("You are Logged into " + usernameLogin);
         }
         else if(loggedIn == false){
             window.alert("Account " + usernameLogin + " is not found");
