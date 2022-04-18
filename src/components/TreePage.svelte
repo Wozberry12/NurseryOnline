@@ -116,14 +116,14 @@
 	
 	const handleAddReview = (tree) =>{
 		let localFruitList = JSON.parse(localStorage.getItem("treeList"));
-		let addRating = document.getElementById("ratingInput").value;
-		let addeDescription = document.getElementById("descriptionInput").value;
+		let addRating = document.getElementById("ratingInputTree").value;
+		let addeDescription = document.getElementById("descriptionInputTree").value;
 
 		let currentProfile = JSON.parse(sessionStorage.getItem("currentlyLogedIn"));
 			let currentProfileUsername = currentProfile.username;
 			for (var item = 0; item < localFruitList.length; item++) {
 				if(localFruitList[item].id == tree.id){
-					var addedReview = new Review(addRating, addeDescription,"#", currentProfileUsername);
+					var addedReview = new Review(addRating, addeDescription, currentProfileUsername);
 					console.log(addedReview);
 					localFruitList[item].reviews.push(addedReview);
 					console.log(item);
@@ -163,9 +163,9 @@
 					<label for="title">Enter Your Review of This Item:</label>
 				
 					<label for="rating">Rating:</label>
-					<input type="text" id="ratingInput" name="rating">
+					<input type="text" id="ratingInputTree" name="rating">
 					<label for="description">Description:</label>
-					<input type="text" id="descriptionInput" name="description">
+					<input type="text" id="descriptionInputTree" name="description">
 					<button class="addReview" on:click={() => handleAddReview(tree)}>Add Review</button>
 				
 			</div>
