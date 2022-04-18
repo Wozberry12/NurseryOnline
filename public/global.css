@@ -65,7 +65,7 @@ input, button, select, textarea {
 	font-size: 25px;
 	margin-top: 6%;
 	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-	font-size: 40px;
+	font-size: 35px;
 	font-weight: bold;
 }
 .itemButton{
@@ -114,11 +114,11 @@ button:focus {
 .purchaseButton{
 	float: right;
 }
-footer {
+#footer {
 	position: relative;
-	margin: 0;
-	padding: 0;
-	height: 4%;
+	width: 100%;
+	bottom: 0;
+	height: 4rem;  
 	clear: both;
 	color: white;
 	background-color: #333;
