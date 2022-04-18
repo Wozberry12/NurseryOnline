@@ -51,7 +51,7 @@
         </div>
     {/each}
     <div class="totalPrice">
-        totalPrice = {sum};
+        totalPrice = {sum}
     </div>
     
 </div>
