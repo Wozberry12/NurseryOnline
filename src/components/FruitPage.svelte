@@ -137,6 +137,22 @@
 		localStorage.setItem("fruitList", JSON.stringify(localFruitList));
 		
 	}
+	const handlePassFruit = (fruit) =>{
+		let fruitInStorage = JSON.parse(localStorage.getItem("fruitList"));
+		for(var item = 0; item <fruitInStorage.length; item++){
+			if(fruitInStorage[item].id == fruit.id){
+				fruitInStorage.splice(item, 1);
+			}
+		}
+		let itemDiv = document.getElementsByID("itemImage");
+		itemDiv.innerHTML = "";
+
+		let descriptionDiv = document.getElementById("itemDescription");
+		descriptionDiv.innerHTML = "";
+
+		localStorage.setItem("fruitList", JSON.stringify(fruitInStorage));
+		
+	}
 </script>
 
 <div id="itemList">
@@ -156,8 +172,10 @@
 			</div>
 			<div class="itemButton">
 				<button class="addWishlist" on:click={() => handleWish(fruit)}>Add to WishList</button>
+				<button id="notInterest" on:click={() => handlePassFruit(fruit)}>Not Interested</button>
 				<br>
 				<button id="viewReview" on:click={() => handleReview(fruit)}>View Reviews</button>
+
 			</div>
 			{#if {showReview}}
 				<ReviewFruit viewReview={showReview} reviewOfItems={fruit.reviews}/>
