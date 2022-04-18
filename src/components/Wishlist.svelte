@@ -65,5 +65,6 @@
         float: right;
         margin-right: 50px;
         border-color: black ;
+        font-size: 40px;
     }
 </style>
