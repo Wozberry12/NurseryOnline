@@ -42,7 +42,7 @@
 	var corn = new Item(2009, "Corn Plant", "dracaena fragrans", 33.99, 14, "https://cdn.atwilltech.com/flowerdatabase/b/basket-of-corn-plants-dracaena-fragrans-massangeana-PL01601.425.jpg", review9);
 	var umbrella = new Item(2010, "Umbrella Plant", "", 49.99, 17, "https://cdn.shoplightspeed.com/shops/611765/files/29754218/schefflera-arboricola-35.jpg", review10);
 
-
+	var newReview0 = new Review(9, "I love chopping this everything", "Marco")
 	var newReview1 = new Review(9, "Great Taste", "Ben");
 	var newReview2 = new Review(6, "Average Taste", "Will");
 	var newReview3 = new Review(4, "Could've been better", "Marco");
@@ -158,6 +158,9 @@
 				<ReviewTree viewReview={showReview} reviewOfItems={tree.reviews}/>
 			{/if}
 			<div id="addReview">	
+				<form id="addReviewForm">
+					<br>
+					<label for="title">Enter Your Review of This Item:</label>
 				
 					<label for="rating">Rating:</label>
 					<input type="text" id="ratingInput" name="rating">

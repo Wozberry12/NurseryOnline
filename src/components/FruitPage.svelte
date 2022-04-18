@@ -44,16 +44,16 @@
 	var durian = new Item(1009, "Durian", "Durian", 33.99, 14, "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-2_6SRJK2viP847Hy6Vcq2SUj7UkuHVZ_6k94SEB26nj01zSKrepPpqc-ylMzYXbkX7o&usqp=CAU", review9);
 	var dragonfruit = new Item(1010, "DragonFruit", "DragonFruit", 49.99, 17, "https://cdn.shopify.com/s/files/1/0336/7167/5948/products/3-count-image-of-dragon-fruit-white-fruit-29921760706604_600x600.jpg?v=1648081574", review10);
 	
-	var newReview1 = new Review(4, "Great Taste", "Ben");
-	var newReview2 = new Review(3, "Average Taste", "Will");
-	var newReview3 = new Review(2, "Could've been better", "Marco");
-	var newReview4 = new Review(1, "Would Not Buy Again",  "Ben");
-	var newReview5 = new Review(5, "Amazing Product!",  "Will");
-	var newReview6 = new Review(4, "Pretty great quality",  "Ben");
-	var newReview7 = new Review(3, "Average quality", "Marco");
-	var newReview8 = new Review(2, "Bad Taste",  "Ben");
-	var newReview9 = new Review(1, "Rotting", "Will");
-	var newReview10 = new Review(5, "Would buy 50 more!", "Marco");
+	var newReview1 = new Review(9,"This is one of the best apples that I have tasted. My entire family loves this!", "Ben");
+	var newReview2 = new Review(3, "Average Taste. Would not but again OwO", "Marco");
+	var newReview3 = new Review(2, "It is sweet, but it could've been better. Some orders that arrived are also rotten. >:[", "Marco");
+	var newReview4 = new Review(9, "I mised the fruit to make my specialty and it tasted the best! You gained a new customer",  "Ben");
+	var newReview5 = new Review(8, "Amazing Product! Very Sweet and makes me feel like Ceasar when being fed by my wife.",  "Will");
+	var newReview6 = new Review(6, "Pretty decent quality. But I ordered regular oranges, not blood orange",  "Ben");
+	var newReview7 = new Review(10, "Order this from a challenge by some flat friends. Ended up knocking out one of us for several days. 10/10 would recommend", "Will");
+	var newReview8 = new Review(2, "Bad Taste; very hairy, very ew ew",  "Marco");
+	var newReview9 = new Review(1, "[CAUTION] DO NOT BUY, THE SPIKES CAN HURT YOU!!!!!!!", "Ben");
+	var newReview10 = new Review(5, "dargon", "Marco");
 	
 	goldenDelicous.reviews.push(newReview1);
 	grannySmith.reviews.push(newReview2);
@@ -157,11 +157,18 @@
 				<ReviewFruit viewReview={showReview} reviewOfItems={fruit.reviews}/>
 			{/if}
 			<div id="addReview">	
+
 				
+
+				
+					<br>
+					<label for="title">Enter Your Review of This Item:</label>
+
 					<label for="rating">Rating:</label>
 					<input type="text" id="ratingInput" name="rating">
 					<label for="description">Description:</label>
 					<input type="text" id="descriptionInput" name="description">
+					<br>
 					<button class="addReview" on:click={() => handleAddReview(fruit)}>Add Review</button>
 				
 			</div>

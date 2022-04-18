@@ -14,11 +14,15 @@
     }
     var wishList = [];
     var wishList2 = [];
+    var wishList3 = [];
+    var wishList4 = [];
     var account1 = new profile("marco", "marcopassword", wishList);
     var account2 = new profile("ben", "benpassword", wishList2);
+    var account3 = new profile("will", "willpassword", wishList3);
+    var account4 = new profile("pascucci", "giveusagoodscoreplz", wishList4);
     var localAccounts = [];
     //var loggedInProfile = [];
-    localAccounts = [account1, account2];
+    localAccounts = [account1, account2, account3, account4];
     localStorage.setItem("Accounts", JSON.stringify(localAccounts));
 
     const handleLogin = (usernameLogin, passwordLogin) => {
