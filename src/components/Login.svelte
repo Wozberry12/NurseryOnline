@@ -101,10 +101,13 @@
 <style>
     .titleImage{
         float: right;
+        margin: 15px;
         width: 30%;
         height: 30%;
     }
     .titleImage > img{
+        border: solid 5px black;
+        border-radius: 5%;
         width: 100%;
         height: 100%;
     }

@@ -5,10 +5,6 @@
     var profile = JSON.parse(sessionStorage.getItem("currentlyLogedIn"));
 
     var itemList = profile.wishList;
-    if (itemList == null) {
-        
-    }
-
     var sum = 0;
     let showCheckout = false;
     

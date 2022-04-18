@@ -27,5 +27,6 @@
         height: 100%;
         width: 100%;
         border: groove;
+        border-radius: 5%;
     }
 </style>
